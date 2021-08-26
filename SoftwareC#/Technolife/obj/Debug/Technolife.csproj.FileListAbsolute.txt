@@ -1,0 +1,13 @@
+D:\Uzaktan Eğitim\3.(2'den Yaz Okulu) - Veri Tabanı Yönetim Sistemleri\TECHNOLIFE\TECHNOLIFE\SoftwareC#\Technolife\bin\Debug\Technolife.exe.config
+D:\Uzaktan Eğitim\3.(2'den Yaz Okulu) - Veri Tabanı Yönetim Sistemleri\TECHNOLIFE\TECHNOLIFE\SoftwareC#\Technolife\bin\Debug\Technolife.exe
+D:\Uzaktan Eğitim\3.(2'den Yaz Okulu) - Veri Tabanı Yönetim Sistemleri\TECHNOLIFE\TECHNOLIFE\SoftwareC#\Technolife\bin\Debug\Technolife.pdb
+D:\Uzaktan Eğitim\3.(2'den Yaz Okulu) - Veri Tabanı Yönetim Sistemleri\TECHNOLIFE\TECHNOLIFE\SoftwareC#\Technolife\obj\Debug\Technolife.csproj.AssemblyReference.cache
+D:\Uzaktan Eğitim\3.(2'den Yaz Okulu) - Veri Tabanı Yönetim Sistemleri\TECHNOLIFE\TECHNOLIFE\SoftwareC#\Technolife\obj\Debug\Technolife.Properties.Resources.resources
+D:\Uzaktan Eğitim\3.(2'den Yaz Okulu) - Veri Tabanı Yönetim Sistemleri\TECHNOLIFE\TECHNOLIFE\SoftwareC#\Technolife\obj\Debug\Technolife.csproj.GenerateResource.cache
+D:\Uzaktan Eğitim\3.(2'den Yaz Okulu) - Veri Tabanı Yönetim Sistemleri\TECHNOLIFE\TECHNOLIFE\SoftwareC#\Technolife\obj\Debug\Technolife.csproj.CoreCompileInputs.cache
+D:\Uzaktan Eğitim\3.(2'den Yaz Okulu) - Veri Tabanı Yönetim Sistemleri\TECHNOLIFE\TECHNOLIFE\SoftwareC#\Technolife\obj\Debug\Technolife.exe
+D:\Uzaktan Eğitim\3.(2'den Yaz Okulu) - Veri Tabanı Yönetim Sistemleri\TECHNOLIFE\TECHNOLIFE\SoftwareC#\Technolife\obj\Debug\Technolife.pdb
+D:\Uzaktan Eğitim\3.(2'den Yaz Okulu) - Veri Tabanı Yönetim Sistemleri\TECHNOLIFE\TECHNOLIFE\SoftwareC#\Technolife\bin\Debug\Bunifu_UI_v1.5.3.dll
+D:\Uzaktan Eğitim\3.(2'den Yaz Okulu) - Veri Tabanı Yönetim Sistemleri\TECHNOLIFE\TECHNOLIFE\SoftwareC#\Technolife\bin\Debug\Bunifu_UI_v1.5.3.xml
+D:\Uzaktan Eğitim\3.(2'den Yaz Okulu) - Veri Tabanı Yönetim Sistemleri\TECHNOLIFE\TECHNOLIFE\SoftwareC#\Technolife\obj\Debug\Technolife.LoginForm.resources
+D:\Uzaktan Eğitim\3.(2'den Yaz Okulu) - Veri Tabanı Yönetim Sistemleri\TECHNOLIFE\TECHNOLIFE\SoftwareC#\Technolife\obj\Debug\Technolife.csproj.CopyComplete
