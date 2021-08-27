@@ -7,8 +7,8 @@ using System.Data.SqlClient;
 
 namespace Technolife
 {
-    class SQLConnectionClass
-    {
+    class SqlConnect
+    { 
         public SqlConnection Connect()
         {
             SqlConnection Connect = new SqlConnection(@"Data Source=KAGANCANSIT\KAGANCANSIT; Initial Catalog=Technolife; Integrated Security=True");

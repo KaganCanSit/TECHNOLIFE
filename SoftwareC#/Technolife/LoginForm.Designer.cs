@@ -133,10 +133,10 @@ namespace Technolife
             this.InformLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.InformLabel.Location = new System.Drawing.Point(169, 499);
             this.InformLabel.Name = "InformLabel";
-            this.InformLabel.Size = new System.Drawing.Size(188, 60);
+            this.InformLabel.Size = new System.Drawing.Size(193, 60);
             this.InformLabel.TabIndex = 7;
-            this.InformLabel.Text = "Üyeliğin yok mu?\r\nBelki sadece ekip sıralamalarına \r\nbakmak istiyorsundur. \r\nRoke" +
-    "te tıkla!";
+            this.InformLabel.Text = "Üyeliğin yok mu?\r\nBelki sadece proje sıralamalarına \r\nbakmak istiyorsundur. \r\nRok" +
+    "ete tıkla!";
             this.InformLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // ShowOrderImageButton
@@ -168,7 +168,9 @@ namespace Technolife
             this.Controls.Add(this.LoginImageButton);
             this.Controls.Add(this.ShowOrderImageButton);
             this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "LoginForm";
             this.Text = "Giriş Yap";
             ((System.ComponentModel.ISupportInitialize)(this.LogoImageButton)).EndInit();

@@ -22,9 +22,12 @@ namespace Technolife
         //Database'e bağlanabilmek ve kullanabilmek için tanımlamış olduğum bağlantıyı çağırıyorum.
         SqlConnection Connect = new SqlConnection();
 
+        //Üye Olmayanların Yarışma Sıralamalarını Görebilmeleri İçin Başka Bir Form Oluşturup Genel Proje-Puan Tablosunu View Yardımıyla Gösteriyoruz.
         private void ShowOrderImageButton_Click(object sender, EventArgs e)
         {
-
+            TeamScoreForm TeamScore = new TeamScoreForm();
+            TeamScore.Show();
+            this.Hide();
         }
     }
 }

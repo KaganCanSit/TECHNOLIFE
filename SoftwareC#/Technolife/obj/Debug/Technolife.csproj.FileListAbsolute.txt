@@ -11,3 +11,4 @@ D:\Uzaktan Eğitim\3.(2'den Yaz Okulu) - Veri Tabanı Yönetim Sistemleri\TECHNO
 D:\Uzaktan Eğitim\3.(2'den Yaz Okulu) - Veri Tabanı Yönetim Sistemleri\TECHNOLIFE\TECHNOLIFE\SoftwareC#\Technolife\bin\Debug\Bunifu_UI_v1.5.3.xml
 D:\Uzaktan Eğitim\3.(2'den Yaz Okulu) - Veri Tabanı Yönetim Sistemleri\TECHNOLIFE\TECHNOLIFE\SoftwareC#\Technolife\obj\Debug\Technolife.LoginForm.resources
 D:\Uzaktan Eğitim\3.(2'den Yaz Okulu) - Veri Tabanı Yönetim Sistemleri\TECHNOLIFE\TECHNOLIFE\SoftwareC#\Technolife\obj\Debug\Technolife.csproj.CopyComplete
+D:\Uzaktan Eğitim\3.(2'den Yaz Okulu) - Veri Tabanı Yönetim Sistemleri\TECHNOLIFE\TECHNOLIFE\SoftwareC#\Technolife\obj\Debug\Technolife.TeamScoreForm.resources
