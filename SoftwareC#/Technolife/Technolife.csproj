@@ -51,6 +51,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EkipUyesiForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EkipUyesiForm.Designer.cs">
+      <DependentUpon>EkipUyesiForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JuriUyesiForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JuriUyesiForm.Designer.cs">
+      <DependentUpon>JuriUyesiForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,12 +72,24 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SQLConnectionClass.cs" />
+    <Compile Include="TakimKaptaniForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TakimKaptaniForm.Designer.cs">
+      <DependentUpon>TakimKaptaniForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="TeamScore.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="TeamScore.Designer.cs">
       <DependentUpon>TeamScore.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="EkipUyesiForm.resx">
+      <DependentUpon>EkipUyesiForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JuriUyesiForm.resx">
+      <DependentUpon>JuriUyesiForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -78,6 +102,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="TakimKaptaniForm.resx">
+      <DependentUpon>TakimKaptaniForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TeamScore.resx">
       <DependentUpon>TeamScore.cs</DependentUpon>
     </EmbeddedResource>

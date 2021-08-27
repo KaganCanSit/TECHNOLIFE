@@ -31,5 +31,10 @@ namespace Technolife
             ScoreDataGrid.DataSource = dt;
             Connect.Connect().Close();
         }
+
+        private void ScoreDataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

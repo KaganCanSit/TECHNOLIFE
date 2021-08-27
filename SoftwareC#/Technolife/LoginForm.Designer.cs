@@ -125,6 +125,7 @@ namespace Technolife
             this.LoginImageButton.TabIndex = 6;
             this.LoginImageButton.TabStop = false;
             this.LoginImageButton.Zoom = 10;
+            this.LoginImageButton.Click += new System.EventHandler(this.LoginImageButton_Click);
             // 
             // InformLabel
             // 
