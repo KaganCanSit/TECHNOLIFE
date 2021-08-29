@@ -35,10 +35,25 @@ namespace Technolife
             NewProjectGroupBox.Visible = false;
         }
 
+        //Takım Bilgilerini Görüntülemek İçin SQL Üzerinde Yazılmış Olan Prosedürü Kullanarak Veriyi Tabloya Aktarıyoruz.
         void TeamInfoShow()
         {
             Visibility();
             komut = new SqlCommand("TeamInfo", Connect.Connect());
+            komut.CommandType = CommandType.StoredProcedure;
+            komut.Parameters.AddWithValue("@EkipID", LoginForm.EkipID);
+            SqlDataAdapter da = new SqlDataAdapter(komut);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            TakimKaptaniDataGrid.DataSource = dt;
+            komut.ExecuteNonQuery();
+            Connect.Connect().Close();
+        }
+        //Proje Bilgilerini Görüntülemek İçin SQL Üzerinde Yazılmış OlanProsedürü Kullanarak Veriyi Tabloya Aktarıyoruz.
+        void ProjectInformationShow()
+        {
+            Visibility();
+            komut = new SqlCommand("ShowProjectInfo", Connect.Connect());
             komut.CommandType = CommandType.StoredProcedure;
             komut.Parameters.AddWithValue("@EkipID", LoginForm.EkipID);
             SqlDataAdapter da = new SqlDataAdapter(komut);
@@ -125,6 +140,30 @@ namespace Technolife
             NewUserGroupBox.Visible = false;
             TakimKaptaniDataGrid.Visible = false;
             NewProjectGroupBox.Visible = true;
+        }
+        //Yeni Projeyi Sisteme Ekleme
+        private void NewProjectAddButton_Click(object sender, EventArgs e)
+        {
+            Visibility();
+            komut = new SqlCommand("NewProject", Connect.Connect());
+            komut.CommandType = CommandType.StoredProcedure;
+            komut.Parameters.AddWithValue("@ekipID", LoginForm.EkipID);
+            komut.Parameters.AddWithValue("@kategoriID", ProjectCategoryComboBox.Text);
+            komut.Parameters.AddWithValue("@projeAd", ProjectNameTextBox.Text);
+            komut.Parameters.AddWithValue("@projeBilgi", ProjectInformationTextBox.Text);
+            komut.Parameters.AddWithValue("@katilimtarih",DateTime.Now());
+            if (ProjectCategoryComboBox.Text == "" || ProjectNameTextBox.Text == "" || ProjectInformationTextBox.Text == "")
+            {
+                MessageBox.Show("Boş değer bırakmayınız. Lütfen kontrol ederek yeniden deneyiniz.");
+            }
+            else
+            {
+                komut.ExecuteNonQuery();
+                Connect.Connect().Close();
+                ProjectInformationShow();
+                MessageBox.Show("Yeni Projeniz Sisteme Eklendi. 'OK'a Bastıktan Sonra Güncel Tablo Üzerinde Yeni Proje Bilgilerinizi İnceleyebilirsiniz.");
+            }
+
         }
     }
 }
