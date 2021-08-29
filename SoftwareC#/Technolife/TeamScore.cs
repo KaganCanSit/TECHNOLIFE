@@ -21,7 +21,7 @@ namespace Technolife
         //Database'e bağlanabilmek ve kullanabilmek için tanımlamış olduğum bağlantıyı çağırıyorum.
         SqlConnect Connect = new SqlConnect();
 
-        //DataGrid İçerisine Yazmış OLduğumuz View Verilerini Çekiyoruz.
+        //DataGrid İçerisine Database Üzerinde Kayıtlı Projelere Dair Bilgileri Çekiyoruz.
         private void TeamScoreForm_Load(object sender, EventArgs e)
         {
             SqlCommand komut = new SqlCommand("SELECT * FROM ProjectScoreRanking", Connect.Connect());
@@ -30,11 +30,6 @@ namespace Technolife
             da.Fill(dt);
             ScoreDataGrid.DataSource = dt;
             Connect.Connect().Close();
-        }
-
-        private void ScoreDataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

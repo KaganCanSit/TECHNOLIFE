@@ -30,24 +30,18 @@ namespace Technolife
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TeamScoreForm));
-            this.ScoreDataGrid = new System.Windows.Forms.DataGridView();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.RocketImageButton = new Bunifu.Framework.UI.BunifuImageButton();
             this.TopTextLabel = new System.Windows.Forms.Label();
             this.DownTextLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.ScoreDataGrid)).BeginInit();
+            this.ScoreDataGrid = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.RocketImageButton)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ScoreDataGrid)).BeginInit();
             this.SuspendLayout();
-            // 
-            // ScoreDataGrid
-            // 
-            this.ScoreDataGrid.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.ScoreDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ScoreDataGrid.GridColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ScoreDataGrid.Location = new System.Drawing.Point(7, 131);
-            this.ScoreDataGrid.Name = "ScoreDataGrid";
-            this.ScoreDataGrid.Size = new System.Drawing.Size(451, 486);
-            this.ScoreDataGrid.TabIndex = 0;
-            this.ScoreDataGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ScoreDataGrid_CellContentClick);
             // 
             // RocketImageButton
             // 
@@ -87,6 +81,48 @@ namespace Technolife
     "in.";
             this.DownTextLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // ScoreDataGrid
+            // 
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.InfoText;
+            this.ScoreDataGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.InfoText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ScoreDataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.ScoreDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.InfoText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.ScoreDataGrid.DefaultCellStyle = dataGridViewCellStyle3;
+            this.ScoreDataGrid.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.ScoreDataGrid.Location = new System.Drawing.Point(7, 131);
+            this.ScoreDataGrid.Name = "ScoreDataGrid";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.InfoText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ScoreDataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.InfoText;
+            this.ScoreDataGrid.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.ScoreDataGrid.Size = new System.Drawing.Size(453, 486);
+            this.ScoreDataGrid.TabIndex = 4;
+            // 
             // TeamScoreForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -95,10 +131,10 @@ namespace Technolife
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(465, 629);
+            this.Controls.Add(this.ScoreDataGrid);
             this.Controls.Add(this.DownTextLabel);
             this.Controls.Add(this.TopTextLabel);
             this.Controls.Add(this.RocketImageButton);
-            this.Controls.Add(this.ScoreDataGrid);
             this.ForeColor = System.Drawing.Color.Transparent;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -106,18 +142,17 @@ namespace Technolife
             this.Name = "TeamScoreForm";
             this.Text = "Yarışma İçerisinde Bulunan Projelerin Genel Skorları";
             this.Load += new System.EventHandler(this.TeamScoreForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.ScoreDataGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RocketImageButton)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ScoreDataGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView ScoreDataGrid;
         private Bunifu.Framework.UI.BunifuImageButton RocketImageButton;
         private System.Windows.Forms.Label TopTextLabel;
         private System.Windows.Forms.Label DownTextLabel;
+        private System.Windows.Forms.DataGridView ScoreDataGrid;
     }
 }

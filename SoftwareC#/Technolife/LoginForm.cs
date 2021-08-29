@@ -30,29 +30,42 @@ namespace Technolife
             this.Hide();
         }
 
+        public static int YetkiID;
+        public static int KullaniciID;
+        public static int EkipID;
+
         private void LoginImageButton_Click(object sender, EventArgs e)
         {
-            komut = new SqlCommand("Select TCNo, KullaniciSifre, YetkiID From tblKullanici where TCNo=@p3 and KullaniciSifre=@p4", Connect.Connect());
+            komut = new SqlCommand("Select TCNo, KullaniciSifre, YetkiID, EkipID, KullaniciID From tblKullanici where TCNo=@p3 and KullaniciSifre=@p4", Connect.Connect());
             komut.Parameters.AddWithValue("@p3", TCNoTextBox.Text);
             komut.Parameters.AddWithValue("@p4", PasswordTextBox.Text);
 
             SqlDataReader dr = komut.ExecuteReader();
             if (dr.Read())
             {
-                //Tablodaki YetkiID Bilgisini Değişkene Atayarak Kullanıcıları Ayırıyoruz.
-                int YetkiID = int.Parse(dr[2].ToString());
+                //Tablodaki Mevcut Kullanıcıya Ait Bilgileri Değişkene Atayarak Programı Kişiye Uygun Hale Getiriyoruz.
+                YetkiID = int.Parse(dr[2].ToString());
+                EkipID = int.Parse(dr[3].ToString());
+                KullaniciID = int.Parse(dr[4].ToString());
+
                 //Kullanıcı Girişi Yetkisine Göre İşlem Yapacağı Forma İletiyoruz. 
                 if (YetkiID == 1)
                 {
-                    MessageBox.Show("Jüri Üyesi");
+                    JuriUyesiForm JuriUyesi = new JuriUyesiForm();
+                    JuriUyesi.Show();
+                    this.Hide();
                 }
                 else if (YetkiID == 2)
                 {
-                    MessageBox.Show("Takım Kaptanı");
+                    TakimKaptaniForm TakimKaptani = new TakimKaptaniForm();
+                    TakimKaptani.Show();
+                    this.Hide();
                 }
                 else if (YetkiID == 3)
                 {
-                    MessageBox.Show("Ekip Üyesi");
+                    EkipUyesiForm EkipUyesi = new EkipUyesiForm();
+                    EkipUyesi.Show();
+                    this.Hide();
                 }
             }
             else

@@ -173,7 +173,7 @@ namespace Technolife
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "LoginForm";
-            this.Text = "Giriş Yap";
+            this.Text = "Technolife - Giriş Yap";
             ((System.ComponentModel.ISupportInitialize)(this.LogoImageButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TechnolifeImageButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LoginImageButton)).EndInit();
