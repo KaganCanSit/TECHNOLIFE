@@ -21,6 +21,7 @@ namespace Technolife
         private void TakimKaptaniForm_Load(object sender, EventArgs e)
         {
             MissionCBText();
+            ProjectCategoryText();
         }
 
         //Database'e bağlanabilmek ve kullanabilmek için tanımlamış olduğum bağlantıyı çağırıyorum.
@@ -35,6 +36,7 @@ namespace Technolife
             NewProjectGroupBox.Visible = false;
         }
 
+        //--------------------------------------------------------------------------------------------------------------------------------------
         //Takım Bilgilerini Görüntülemek İçin SQL Üzerinde Yazılmış Olan Prosedürü Kullanarak Veriyi Tabloya Aktarıyoruz.
         void TeamInfoShow()
         {
@@ -49,7 +51,7 @@ namespace Technolife
             komut.ExecuteNonQuery();
             Connect.Connect().Close();
         }
-        //Proje Bilgilerini Görüntülemek İçin SQL Üzerinde Yazılmış OlanProsedürü Kullanarak Veriyi Tabloya Aktarıyoruz.
+        //Proje Bilgilerini Görüntülemek İçin SQL Üzerinde Yazılmış Olan Prosedürü Kullanarak Veriyi Tabloya Aktarıyoruz.
         void ProjectInformationShow()
         {
             Visibility();
@@ -64,6 +66,7 @@ namespace Technolife
             Connect.Connect().Close();
         }
 
+        //--------------------------------------------------------------------------------------------------------------------------------------
         //Görev ComboBox'ının Doldurulması
         void MissionCBText()
         {
@@ -74,11 +77,32 @@ namespace Technolife
             CBMission.ValueMember = "GorevID";
             CBMission.DataSource = dt;
         }
+        //Proje Kategori ComboBox'ının Doldurulması
+        void ProjectCategoryText()
+        {
+            komut = new SqlCommand("Select * From tblKategori", Connect.Connect());
+            SqlDataAdapter da = new SqlDataAdapter(komut);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            ProjectCategoryComboBox.ValueMember = "kategoriID";
+            ProjectCategoryComboBox.DataSource = dt;
+        }
+        
+        //--------------------------------------------------------------------------------------------------------------------------------------
         //GörevID'lerin Açıklaması
         private void MissionInfoButton_Click(object sender, EventArgs e)
         {
             MessageBox.Show("GörevID/Açıklama\n" + "1-Yazılım\n"+"2-Mekanik\n"+"3-Elektrik\n"+"4-Kalıp\n"+"5-Test\n"+"6-Planlama\n"+"7-Kaptan\n");
         }
+        //KategoriID'lerinin Açıklanması
+        private void CategoryInformationFlatButton_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("KategoriID/Açıklama\n" + "1-Üretim (Tarım-Fabrika Otomasyon)\n" + "2-Doğal Afet\n" + "3-Ulaşım\n" +
+                            "4-Hava Sistemleri\n" + "5-Su Altı Sistemler\n" + "6-Ev Sistemleri\n" + "7-Eğitim\n" + "8-Sağlık\n" + "9-Yapay Zeka\n +" +
+                            "10-Enerji\n" + "11-Haberleşme");
+        }
+        //--------------------------------------------------------------------------------------------------------------------------------------
+
 
         //Projelerin Genel Puan Bilgilerini SQL üzerinde yadığımız View yardımıyla getiriyoruz.
         private void CaptanProjectInfoFlatButton_Click(object sender, EventArgs e)
@@ -151,7 +175,7 @@ namespace Technolife
             komut.Parameters.AddWithValue("@kategoriID", ProjectCategoryComboBox.Text);
             komut.Parameters.AddWithValue("@projeAd", ProjectNameTextBox.Text);
             komut.Parameters.AddWithValue("@projeBilgi", ProjectInformationTextBox.Text);
-            komut.Parameters.AddWithValue("@katilimtarih",DateTime.Now());
+            komut.Parameters.AddWithValue("@katilimtarih",DateTime.Now.ToLocalTime());
             if (ProjectCategoryComboBox.Text == "" || ProjectNameTextBox.Text == "" || ProjectInformationTextBox.Text == "")
             {
                 MessageBox.Show("Boş değer bırakmayınız. Lütfen kontrol ederek yeniden deneyiniz.");

@@ -61,6 +61,7 @@ namespace Technolife
             this.NameLabel = new System.Windows.Forms.Label();
             this.MissionLabel = new System.Windows.Forms.Label();
             this.NewProjectGroupBox = new System.Windows.Forms.GroupBox();
+            this.LogoBunifiFlatButton = new Bunifu.Framework.UI.BunifuImageButton();
             this.NewProjectAddButton = new Bunifu.Framework.UI.BunifuFlatButton();
             this.CategoryInformationFlatButton = new Bunifu.Framework.UI.BunifuFlatButton();
             this.ProjectInformationTextBox = new System.Windows.Forms.TextBox();
@@ -69,7 +70,6 @@ namespace Technolife
             this.ProjectInformationLabel = new System.Windows.Forms.Label();
             this.ProjectNameLabel = new System.Windows.Forms.Label();
             this.ProjectCategoryLabel = new System.Windows.Forms.Label();
-            this.LogoBunifiFlatButton = new Bunifu.Framework.UI.BunifuImageButton();
             this.EkipUyesiMenuGP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LogoImageButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TakimKaptaniDataGrid)).BeginInit();
@@ -614,6 +614,19 @@ namespace Technolife
             this.NewProjectGroupBox.Text = "Yeni Proje Bilgilerini Giriniz";
             this.NewProjectGroupBox.Visible = false;
             // 
+            // LogoBunifiFlatButton
+            // 
+            this.LogoBunifiFlatButton.BackColor = System.Drawing.Color.Transparent;
+            this.LogoBunifiFlatButton.Image = ((System.Drawing.Image)(resources.GetObject("LogoBunifiFlatButton.Image")));
+            this.LogoBunifiFlatButton.ImageActive = null;
+            this.LogoBunifiFlatButton.Location = new System.Drawing.Point(1030, 41);
+            this.LogoBunifiFlatButton.Name = "LogoBunifiFlatButton";
+            this.LogoBunifiFlatButton.Size = new System.Drawing.Size(120, 108);
+            this.LogoBunifiFlatButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.LogoBunifiFlatButton.TabIndex = 8;
+            this.LogoBunifiFlatButton.TabStop = false;
+            this.LogoBunifiFlatButton.Zoom = 10;
+            // 
             // NewProjectAddButton
             // 
             this.NewProjectAddButton.Activecolor = System.Drawing.Color.MediumSpringGreen;
@@ -684,6 +697,7 @@ namespace Technolife
             this.CategoryInformationFlatButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.CategoryInformationFlatButton.Textcolor = System.Drawing.Color.Black;
             this.CategoryInformationFlatButton.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.CategoryInformationFlatButton.Click += new System.EventHandler(this.CategoryInformationFlatButton_Click);
             // 
             // ProjectInformationTextBox
             // 
@@ -734,19 +748,6 @@ namespace Technolife
             this.ProjectCategoryLabel.Size = new System.Drawing.Size(65, 17);
             this.ProjectCategoryLabel.TabIndex = 0;
             this.ProjectCategoryLabel.Text = "Kategori:";
-            // 
-            // LogoBunifiFlatButton
-            // 
-            this.LogoBunifiFlatButton.BackColor = System.Drawing.Color.Transparent;
-            this.LogoBunifiFlatButton.Image = ((System.Drawing.Image)(resources.GetObject("LogoBunifiFlatButton.Image")));
-            this.LogoBunifiFlatButton.ImageActive = null;
-            this.LogoBunifiFlatButton.Location = new System.Drawing.Point(1030, 41);
-            this.LogoBunifiFlatButton.Name = "LogoBunifiFlatButton";
-            this.LogoBunifiFlatButton.Size = new System.Drawing.Size(120, 108);
-            this.LogoBunifiFlatButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.LogoBunifiFlatButton.TabIndex = 8;
-            this.LogoBunifiFlatButton.TabStop = false;
-            this.LogoBunifiFlatButton.Zoom = 10;
             // 
             // TakimKaptaniForm
             // 
@@ -799,7 +800,6 @@ namespace Technolife
         private System.Windows.Forms.Label SurnameLabel;
         private System.Windows.Forms.Label NameLabel;
         private System.Windows.Forms.Label MissionLabel;
-        private System.Windows.Forms.ComboBox MissionComboBox;
         private Bunifu.Framework.UI.BunifuImageButton ReadBookImageButton;
         private Bunifu.Framework.UI.BunifuFlatButton AddUserFlatButton;
         private System.Windows.Forms.TextBox DistrictTextBox;
