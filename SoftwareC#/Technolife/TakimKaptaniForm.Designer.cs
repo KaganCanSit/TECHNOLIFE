@@ -70,6 +70,19 @@ namespace Technolife
             this.ProjectInformationLabel = new System.Windows.Forms.Label();
             this.ProjectNameLabel = new System.Windows.Forms.Label();
             this.ProjectCategoryLabel = new System.Windows.Forms.Label();
+            this.ProjectUpdateGroupBox = new System.Windows.Forms.GroupBox();
+            this.UpdateProjecLogo = new Bunifu.Framework.UI.BunifuImageButton();
+            this.UpdateProjectButton = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.UpdateCategoryInfoButton = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.UpdatePInfoTextBox = new System.Windows.Forms.TextBox();
+            this.UpdatePCategoryTextBox = new System.Windows.Forms.ComboBox();
+            this.UpdatePNameTextBox = new System.Windows.Forms.TextBox();
+            this.UpdatePInfoLabel = new System.Windows.Forms.Label();
+            this.UpdatePNameLabel = new System.Windows.Forms.Label();
+            this.UpdatePCategoryLabel = new System.Windows.Forms.Label();
+            this.UpdateProjectIDLabel = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.UpdateProjectIDComboBox = new System.Windows.Forms.ComboBox();
             this.EkipUyesiMenuGP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LogoImageButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TakimKaptaniDataGrid)).BeginInit();
@@ -77,6 +90,8 @@ namespace Technolife
             ((System.ComponentModel.ISupportInitialize)(this.ReadBookImageButton)).BeginInit();
             this.NewProjectGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LogoBunifiFlatButton)).BeginInit();
+            this.ProjectUpdateGroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.UpdateProjecLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // EkipUyesiMenuGP
@@ -171,6 +186,7 @@ namespace Technolife
             this.ProjectAlterFlatButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.ProjectAlterFlatButton.Textcolor = System.Drawing.Color.Black;
             this.ProjectAlterFlatButton.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProjectAlterFlatButton.Click += new System.EventHandler(this.ProjectAlterFlatButton_Click);
             // 
             // NewUsersAddFalatButton
             // 
@@ -749,12 +765,197 @@ namespace Technolife
             this.ProjectCategoryLabel.TabIndex = 0;
             this.ProjectCategoryLabel.Text = "Kategori:";
             // 
+            // ProjectUpdateGroupBox
+            // 
+            this.ProjectUpdateGroupBox.Controls.Add(this.UpdateProjectIDComboBox);
+            this.ProjectUpdateGroupBox.Controls.Add(this.label5);
+            this.ProjectUpdateGroupBox.Controls.Add(this.UpdateProjectIDLabel);
+            this.ProjectUpdateGroupBox.Controls.Add(this.UpdateProjecLogo);
+            this.ProjectUpdateGroupBox.Controls.Add(this.UpdateProjectButton);
+            this.ProjectUpdateGroupBox.Controls.Add(this.UpdateCategoryInfoButton);
+            this.ProjectUpdateGroupBox.Controls.Add(this.UpdatePInfoTextBox);
+            this.ProjectUpdateGroupBox.Controls.Add(this.UpdatePCategoryTextBox);
+            this.ProjectUpdateGroupBox.Controls.Add(this.UpdatePNameTextBox);
+            this.ProjectUpdateGroupBox.Controls.Add(this.UpdatePInfoLabel);
+            this.ProjectUpdateGroupBox.Controls.Add(this.UpdatePNameLabel);
+            this.ProjectUpdateGroupBox.Controls.Add(this.UpdatePCategoryLabel);
+            this.ProjectUpdateGroupBox.Location = new System.Drawing.Point(6, 618);
+            this.ProjectUpdateGroupBox.Name = "ProjectUpdateGroupBox";
+            this.ProjectUpdateGroupBox.Size = new System.Drawing.Size(1445, 182);
+            this.ProjectUpdateGroupBox.TabIndex = 22;
+            this.ProjectUpdateGroupBox.TabStop = false;
+            this.ProjectUpdateGroupBox.Text = "Güncellemek İstediğiniz Projeye Dair Yeni Bilgileri Giriniz";
+            this.ProjectUpdateGroupBox.Visible = false;
+            // 
+            // UpdateProjecLogo
+            // 
+            this.UpdateProjecLogo.BackColor = System.Drawing.Color.Transparent;
+            this.UpdateProjecLogo.Image = ((System.Drawing.Image)(resources.GetObject("UpdateProjecLogo.Image")));
+            this.UpdateProjecLogo.ImageActive = null;
+            this.UpdateProjecLogo.Location = new System.Drawing.Point(1099, 44);
+            this.UpdateProjecLogo.Name = "UpdateProjecLogo";
+            this.UpdateProjecLogo.Size = new System.Drawing.Size(120, 108);
+            this.UpdateProjecLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.UpdateProjecLogo.TabIndex = 8;
+            this.UpdateProjecLogo.TabStop = false;
+            this.UpdateProjecLogo.Zoom = 10;
+            // 
+            // UpdateProjectButton
+            // 
+            this.UpdateProjectButton.Activecolor = System.Drawing.Color.MediumSpringGreen;
+            this.UpdateProjectButton.BackColor = System.Drawing.Color.LightSalmon;
+            this.UpdateProjectButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.UpdateProjectButton.BorderRadius = 0;
+            this.UpdateProjectButton.ButtonText = "Proje Bilgisini Güncelle";
+            this.UpdateProjectButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.UpdateProjectButton.DisabledColor = System.Drawing.Color.Gray;
+            this.UpdateProjectButton.Iconcolor = System.Drawing.Color.Transparent;
+            this.UpdateProjectButton.Iconimage = null;
+            this.UpdateProjectButton.Iconimage_right = null;
+            this.UpdateProjectButton.Iconimage_right_Selected = null;
+            this.UpdateProjectButton.Iconimage_Selected = null;
+            this.UpdateProjectButton.IconMarginLeft = 0;
+            this.UpdateProjectButton.IconMarginRight = 0;
+            this.UpdateProjectButton.IconRightVisible = true;
+            this.UpdateProjectButton.IconRightZoom = 0D;
+            this.UpdateProjectButton.IconVisible = true;
+            this.UpdateProjectButton.IconZoom = 90D;
+            this.UpdateProjectButton.IsTab = false;
+            this.UpdateProjectButton.Location = new System.Drawing.Point(1227, 71);
+            this.UpdateProjectButton.Margin = new System.Windows.Forms.Padding(5);
+            this.UpdateProjectButton.Name = "UpdateProjectButton";
+            this.UpdateProjectButton.Normalcolor = System.Drawing.Color.LightSalmon;
+            this.UpdateProjectButton.OnHovercolor = System.Drawing.Color.Aquamarine;
+            this.UpdateProjectButton.OnHoverTextColor = System.Drawing.Color.White;
+            this.UpdateProjectButton.selected = false;
+            this.UpdateProjectButton.Size = new System.Drawing.Size(209, 45);
+            this.UpdateProjectButton.TabIndex = 7;
+            this.UpdateProjectButton.Text = "Proje Bilgisini Güncelle";
+            this.UpdateProjectButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.UpdateProjectButton.Textcolor = System.Drawing.Color.Black;
+            this.UpdateProjectButton.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UpdateProjectButton.Click += new System.EventHandler(this.UpdateProjectButton_Click);
+            // 
+            // UpdateCategoryInfoButton
+            // 
+            this.UpdateCategoryInfoButton.Activecolor = System.Drawing.Color.MediumSpringGreen;
+            this.UpdateCategoryInfoButton.BackColor = System.Drawing.Color.LightSalmon;
+            this.UpdateCategoryInfoButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.UpdateCategoryInfoButton.BorderRadius = 0;
+            this.UpdateCategoryInfoButton.ButtonText = "Kategori Açıklamaları";
+            this.UpdateCategoryInfoButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.UpdateCategoryInfoButton.DisabledColor = System.Drawing.Color.Gray;
+            this.UpdateCategoryInfoButton.Iconcolor = System.Drawing.Color.LightSalmon;
+            this.UpdateCategoryInfoButton.Iconimage = null;
+            this.UpdateCategoryInfoButton.Iconimage_right = null;
+            this.UpdateCategoryInfoButton.Iconimage_right_Selected = null;
+            this.UpdateCategoryInfoButton.Iconimage_Selected = null;
+            this.UpdateCategoryInfoButton.IconMarginLeft = 0;
+            this.UpdateCategoryInfoButton.IconMarginRight = 0;
+            this.UpdateCategoryInfoButton.IconRightVisible = true;
+            this.UpdateCategoryInfoButton.IconRightZoom = 0D;
+            this.UpdateCategoryInfoButton.IconVisible = true;
+            this.UpdateCategoryInfoButton.IconZoom = 90D;
+            this.UpdateCategoryInfoButton.IsTab = false;
+            this.UpdateCategoryInfoButton.Location = new System.Drawing.Point(399, 117);
+            this.UpdateCategoryInfoButton.Margin = new System.Windows.Forms.Padding(5);
+            this.UpdateCategoryInfoButton.Name = "UpdateCategoryInfoButton";
+            this.UpdateCategoryInfoButton.Normalcolor = System.Drawing.Color.LightSalmon;
+            this.UpdateCategoryInfoButton.OnHovercolor = System.Drawing.Color.Aquamarine;
+            this.UpdateCategoryInfoButton.OnHoverTextColor = System.Drawing.Color.White;
+            this.UpdateCategoryInfoButton.selected = false;
+            this.UpdateCategoryInfoButton.Size = new System.Drawing.Size(161, 35);
+            this.UpdateCategoryInfoButton.TabIndex = 6;
+            this.UpdateCategoryInfoButton.Text = "Kategori Açıklamaları";
+            this.UpdateCategoryInfoButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.UpdateCategoryInfoButton.Textcolor = System.Drawing.Color.Black;
+            this.UpdateCategoryInfoButton.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.UpdateCategoryInfoButton.Click += new System.EventHandler(this.UpdateCategoryInfoButton_Click);
+            // 
+            // UpdatePInfoTextBox
+            // 
+            this.UpdatePInfoTextBox.Location = new System.Drawing.Point(663, 44);
+            this.UpdatePInfoTextBox.Multiline = true;
+            this.UpdatePInfoTextBox.Name = "UpdatePInfoTextBox";
+            this.UpdatePInfoTextBox.Size = new System.Drawing.Size(430, 118);
+            this.UpdatePInfoTextBox.TabIndex = 5;
+            // 
+            // UpdatePCategoryTextBox
+            // 
+            this.UpdatePCategoryTextBox.FormattingEnabled = true;
+            this.UpdatePCategoryTextBox.Location = new System.Drawing.Point(399, 82);
+            this.UpdatePCategoryTextBox.Name = "UpdatePCategoryTextBox";
+            this.UpdatePCategoryTextBox.Size = new System.Drawing.Size(161, 24);
+            this.UpdatePCategoryTextBox.TabIndex = 4;
+            // 
+            // UpdatePNameTextBox
+            // 
+            this.UpdatePNameTextBox.Location = new System.Drawing.Point(399, 44);
+            this.UpdatePNameTextBox.Name = "UpdatePNameTextBox";
+            this.UpdatePNameTextBox.Size = new System.Drawing.Size(161, 22);
+            this.UpdatePNameTextBox.TabIndex = 3;
+            // 
+            // UpdatePInfoLabel
+            // 
+            this.UpdatePInfoLabel.AutoSize = true;
+            this.UpdatePInfoLabel.Location = new System.Drawing.Point(571, 44);
+            this.UpdatePInfoLabel.Name = "UpdatePInfoLabel";
+            this.UpdatePInfoLabel.Size = new System.Drawing.Size(86, 17);
+            this.UpdatePInfoLabel.TabIndex = 2;
+            this.UpdatePInfoLabel.Text = "Proje İçeriği:";
+            // 
+            // UpdatePNameLabel
+            // 
+            this.UpdatePNameLabel.AutoSize = true;
+            this.UpdatePNameLabel.Location = new System.Drawing.Point(310, 47);
+            this.UpdatePNameLabel.Name = "UpdatePNameLabel";
+            this.UpdatePNameLabel.Size = new System.Drawing.Size(36, 17);
+            this.UpdatePNameLabel.TabIndex = 1;
+            this.UpdatePNameLabel.Text = "İsim:";
+            // 
+            // UpdatePCategoryLabel
+            // 
+            this.UpdatePCategoryLabel.AutoSize = true;
+            this.UpdatePCategoryLabel.Location = new System.Drawing.Point(310, 85);
+            this.UpdatePCategoryLabel.Name = "UpdatePCategoryLabel";
+            this.UpdatePCategoryLabel.Size = new System.Drawing.Size(65, 17);
+            this.UpdatePCategoryLabel.TabIndex = 0;
+            this.UpdatePCategoryLabel.Text = "Kategori:";
+            // 
+            // UpdateProjectIDLabel
+            // 
+            this.UpdateProjectIDLabel.AutoSize = true;
+            this.UpdateProjectIDLabel.Location = new System.Drawing.Point(9, 85);
+            this.UpdateProjectIDLabel.Name = "UpdateProjectIDLabel";
+            this.UpdateProjectIDLabel.Size = new System.Drawing.Size(89, 17);
+            this.UpdateProjectIDLabel.TabIndex = 9;
+            this.UpdateProjectIDLabel.Text = "ID Numarası:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(9, 37);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(207, 34);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Güncellemek İstediğiniz Projeyi \r\nProjeID Seçeneği İle Belirleyiniz";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // UpdateProjectIDComboBox
+            // 
+            this.UpdateProjectIDComboBox.FormattingEnabled = true;
+            this.UpdateProjectIDComboBox.Location = new System.Drawing.Point(116, 82);
+            this.UpdateProjectIDComboBox.Name = "UpdateProjectIDComboBox";
+            this.UpdateProjectIDComboBox.Size = new System.Drawing.Size(161, 24);
+            this.UpdateProjectIDComboBox.TabIndex = 11;
+            // 
             // TakimKaptaniForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1465, 814);
+            this.Controls.Add(this.ProjectUpdateGroupBox);
             this.Controls.Add(this.NewProjectGroupBox);
             this.Controls.Add(this.NewUserGroupBox);
             this.Controls.Add(this.TakimKaptaniDataGrid);
@@ -776,6 +977,9 @@ namespace Technolife
             this.NewProjectGroupBox.ResumeLayout(false);
             this.NewProjectGroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LogoBunifiFlatButton)).EndInit();
+            this.ProjectUpdateGroupBox.ResumeLayout(false);
+            this.ProjectUpdateGroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.UpdateProjecLogo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -822,5 +1026,18 @@ namespace Technolife
         private System.Windows.Forms.Label ProjectNameLabel;
         private System.Windows.Forms.Label ProjectCategoryLabel;
         private Bunifu.Framework.UI.BunifuImageButton LogoBunifiFlatButton;
+        private System.Windows.Forms.GroupBox ProjectUpdateGroupBox;
+        private System.Windows.Forms.ComboBox UpdateProjectIDComboBox;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label UpdateProjectIDLabel;
+        private Bunifu.Framework.UI.BunifuImageButton UpdateProjecLogo;
+        private Bunifu.Framework.UI.BunifuFlatButton UpdateProjectButton;
+        private Bunifu.Framework.UI.BunifuFlatButton UpdateCategoryInfoButton;
+        private System.Windows.Forms.TextBox UpdatePInfoTextBox;
+        private System.Windows.Forms.ComboBox UpdatePCategoryTextBox;
+        private System.Windows.Forms.TextBox UpdatePNameTextBox;
+        private System.Windows.Forms.Label UpdatePInfoLabel;
+        private System.Windows.Forms.Label UpdatePNameLabel;
+        private System.Windows.Forms.Label UpdatePCategoryLabel;
     }
 }

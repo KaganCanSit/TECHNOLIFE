@@ -22,6 +22,7 @@ namespace Technolife
         {
             MissionCBText();
             ProjectCategoryText();
+            ProjectIDText();
         }
 
         //Database'e bağlanabilmek ve kullanabilmek için tanımlamış olduğum bağlantıyı çağırıyorum.
@@ -80,15 +81,34 @@ namespace Technolife
         //Proje Kategori ComboBox'ının Doldurulması
         void ProjectCategoryText()
         {
-            komut = new SqlCommand("Select * From tblKategori", Connect.Connect());
+            komut = new SqlCommand("SELECT * FROM tblKategori", Connect.Connect());
             SqlDataAdapter da = new SqlDataAdapter(komut);
             DataTable dt = new DataTable();
             da.Fill(dt);
             ProjectCategoryComboBox.ValueMember = "kategoriID";
             ProjectCategoryComboBox.DataSource = dt;
+            UpdatePCategoryTextBox.ValueMember = "kategoriID";
+            UpdatePCategoryTextBox.DataSource = dt;
         }
-        
+        //ProjectID ComboBox'ının Doldurulması
+        void ProjectIDText()
+        {
+            komut = new SqlCommand("SELECT * FROM tblProje WHERE ekipID=@p1", Connect.Connect());
+            komut.Parameters.AddWithValue("@p1", LoginForm.EkipID);
+            SqlDataAdapter da = new SqlDataAdapter(komut);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            UpdateProjectIDComboBox.ValueMember = "projeID";
+            UpdateProjectIDComboBox.DataSource = dt;
+        }
+
         //--------------------------------------------------------------------------------------------------------------------------------------
+        void CategoryInfo()
+        {
+            MessageBox.Show("KategoriID/Açıklama\n" + "1-Üretim (Tarım-Fabrika Otomasyon)\n" + "2-Doğal Afet\n" + "3-Ulaşım\n" +
+                            "4-Hava Sistemleri\n" + "5-Su Altı Sistemler\n" + "6-Ev Sistemleri\n" + "7-Eğitim\n" + "8-Sağlık\n" + "9-Yapay Zeka\n" +
+                            "10-Enerji\n" + "11-Haberleşme");
+        }      
         //GörevID'lerin Açıklaması
         private void MissionInfoButton_Click(object sender, EventArgs e)
         {
@@ -97,9 +117,12 @@ namespace Technolife
         //KategoriID'lerinin Açıklanması
         private void CategoryInformationFlatButton_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("KategoriID/Açıklama\n" + "1-Üretim (Tarım-Fabrika Otomasyon)\n" + "2-Doğal Afet\n" + "3-Ulaşım\n" +
-                            "4-Hava Sistemleri\n" + "5-Su Altı Sistemler\n" + "6-Ev Sistemleri\n" + "7-Eğitim\n" + "8-Sağlık\n" + "9-Yapay Zeka\n +" +
-                            "10-Enerji\n" + "11-Haberleşme");
+            CategoryInfo();
+        }
+        //KategoriID'lerinin Açıklanması - Update
+        private void UpdateCategoryInfoButton_Click(object sender, EventArgs e)
+        {
+            CategoryInfo();
         }
         //--------------------------------------------------------------------------------------------------------------------------------------
 
@@ -175,7 +198,8 @@ namespace Technolife
             komut.Parameters.AddWithValue("@kategoriID", ProjectCategoryComboBox.Text);
             komut.Parameters.AddWithValue("@projeAd", ProjectNameTextBox.Text);
             komut.Parameters.AddWithValue("@projeBilgi", ProjectInformationTextBox.Text);
-            komut.Parameters.AddWithValue("@katilimtarih",DateTime.Now.ToLocalTime());
+            komut.Parameters.AddWithValue("@katilimtarihi",DateTime.Now.ToLocalTime());
+            komut.Parameters.AddWithValue("@projePuan", 0);
             if (ProjectCategoryComboBox.Text == "" || ProjectNameTextBox.Text == "" || ProjectInformationTextBox.Text == "")
             {
                 MessageBox.Show("Boş değer bırakmayınız. Lütfen kontrol ederek yeniden deneyiniz.");
@@ -187,7 +211,40 @@ namespace Technolife
                 ProjectInformationShow();
                 MessageBox.Show("Yeni Projeniz Sisteme Eklendi. 'OK'a Bastıktan Sonra Güncel Tablo Üzerinde Yeni Proje Bilgilerinizi İnceleyebilirsiniz.");
             }
-
         }
+
+        //Projeleri Görüntüleme Ve Düzenleme
+        private void ProjectAlterFlatButton_Click(object sender, EventArgs e)
+        {
+            Visibility();
+            ProjectUpdateGroupBox.Visible = true;
+            ProjectInformationShow();
+        }
+        //Proje Bilgilerini Güncelleme İşlemleri
+        private void UpdateProjectButton_Click(object sender, EventArgs e)
+        {
+            komut = new SqlCommand("ProjectUpdate", Connect.Connect());
+            komut.CommandType = CommandType.StoredProcedure;
+            komut.Parameters.AddWithValue("@projeID", UpdateProjectIDComboBox.Text);
+            komut.Parameters.AddWithValue("@ekipID", LoginForm.EkipID);
+            komut.Parameters.AddWithValue("@kategoriID", UpdatePCategoryTextBox.Text);
+            komut.Parameters.AddWithValue("@projeAd", UpdatePNameTextBox.Text);
+            komut.Parameters.AddWithValue("@projeBilgi", UpdatePInfoTextBox.Text);
+            komut.Parameters.AddWithValue("@katilimtarihi", DateTime.Now.ToLocalTime());
+            komut.Parameters.AddWithValue("@projePuan", 0);
+            if (UpdatePCategoryTextBox.Text == "" || UpdatePNameTextBox.Text == "" || UpdatePInfoTextBox.Text == "")
+            {
+                MessageBox.Show("Boş değer bırakmayınız. Lütfen kontrol ederek yeniden deneyiniz.");
+            }
+            else
+            {
+                komut.ExecuteNonQuery();
+                Connect.Connect().Close();
+                ProjectInformationShow();
+                MessageBox.Show("Proje Bilginiz Sistem Üzerinde Güncellenmiştir. 'OK'a Bastıktan Sonra Güncel Tablo Üzerinden Kontrol Edebilirsiniz.");
+            }
+        }
+
+
     }
 }
