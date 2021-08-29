@@ -32,6 +32,7 @@ namespace Technolife
         {
             NewUserGroupBox.Visible = false;
             TakimKaptaniDataGrid.Visible = true;
+            NewProjectGroupBox.Visible = false;
         }
 
         void TeamInfoShow()
@@ -74,7 +75,6 @@ namespace Technolife
             da.Fill(dt);
             TakimKaptaniDataGrid.DataSource = dt;
             Connect.Connect().Close();
-
         }
 
         //SQL üzerinde tanımlamış olduğumuz TeamInfo Prosedürü kullanılarak Ekip üyesinin ait olduğu ekibe dair bilgileri getiriyoruz.
@@ -88,6 +88,7 @@ namespace Technolife
         {
             NewUserGroupBox.Visible = true;
             TakimKaptaniDataGrid.Visible = false;
+            NewProjectGroupBox.Visible = false;
         }
         //Yeni Kullaniciyi Sisteme Ekleme
         private void AddUserFlatButton_Click(object sender, EventArgs e)
@@ -107,12 +108,23 @@ namespace Technolife
             komut.Parameters.AddWithValue("@ilce", DistrictTextBox.Text);
             if(CBMission.Text=="" || NameTextBox.Text=="" || SurnameTextBox.Text=="" || PasswordTextBox.Text=="" || TCNumberTextBox.Text==""||PhoneTextBox.Text==""||ProvinceTextBox.Text==""||DistrictTextBox.Text=="")
             {
-                MessageBox.Show("Hiç bir değer boş bırakılamaz. Yeniden deneyiniz.");                
+                MessageBox.Show("Boş değer bırakmayınız. Lütfen kontrol ederek yeniden deneyiniz.");
             }
-            komut.ExecuteNonQuery();
-            Connect.Connect().Close();
-            TeamInfoShow();
-            MessageBox.Show("Yeni Ekip Üyeniz Sisteme Eklendi. 'OK'a Bastıktan Sonra Güncel Tablo Üzerinde Yeni Ekip Bilgilerinizi İnceleyebilirsiniz.");
+            else
+            {
+                komut.ExecuteNonQuery();
+                Connect.Connect().Close();
+                TeamInfoShow();
+                MessageBox.Show("Yeni Ekip Üyeniz Sisteme Eklendi. 'OK'a Bastıktan Sonra Güncel Tablo Üzerinde Yeni Ekip Bilgilerinizi İnceleyebilirsiniz.");
+            }          
+        }
+
+        //Yeni Proje Ekle İlk Görünüm Ayarı
+        private void NewProjectFlatButton_Click(object sender, EventArgs e)
+        {
+            NewUserGroupBox.Visible = false;
+            TakimKaptaniDataGrid.Visible = false;
+            NewProjectGroupBox.Visible = true;
         }
     }
 }
