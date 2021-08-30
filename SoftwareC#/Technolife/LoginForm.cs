@@ -36,7 +36,7 @@ namespace Technolife
 
         private void LoginImageButton_Click(object sender, EventArgs e)
         {
-            komut = new SqlCommand("Select TCNo, KullaniciSifre, YetkiID, EkipID, KullaniciID From tblKullanici where TCNo=@p3 and KullaniciSifre=@p4", Connect.Connect());
+            komut = new SqlCommand("SELECT TCNo, KullaniciSifre, YetkiID, EkipID, KullaniciID FROM tblKullanici WHERE TCNo=@p3 and KullaniciSifre=@p4", Connect.Connect());
             komut.Parameters.AddWithValue("@p3", TCNoTextBox.Text);
             komut.Parameters.AddWithValue("@p4", PasswordTextBox.Text);
 

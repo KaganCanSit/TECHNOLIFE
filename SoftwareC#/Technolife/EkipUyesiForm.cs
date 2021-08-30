@@ -32,7 +32,7 @@ namespace Technolife
         private void TeamInfoFlatButton_Click(object sender, EventArgs e)
         {
             UyeVisible(true);
-            komut = new SqlCommand("TeamInfo",Connect.Connect());
+            komut = new SqlCommand("TeamInfo",Connect.Connect()); //Proc
             komut.CommandType = CommandType.StoredProcedure;
             komut.Parameters.AddWithValue("@EkipID", LoginForm.EkipID);          
             SqlDataAdapter da = new SqlDataAdapter(komut);
@@ -47,7 +47,7 @@ namespace Technolife
         private void ProjectInfoFlatButton_Click_1(object sender, EventArgs e)
         {
             UyeVisible(true);
-            komut = new SqlCommand("SELECT * FROM ProjectScoreRanking", Connect.Connect());
+            komut = new SqlCommand("SELECT * FROM ProjectScoreRanking", Connect.Connect()); //View
             SqlDataAdapter da = new SqlDataAdapter(komut);
             DataTable dt = new DataTable();
             da.Fill(dt);

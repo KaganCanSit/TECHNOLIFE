@@ -25,6 +25,7 @@ namespace Technolife
             ProjectIDText();
         }
 
+
         //Database'e bağlanabilmek ve kullanabilmek için tanımlamış olduğum bağlantıyı çağırıyorum.
         SqlConnect Connect = new SqlConnect();
         SqlCommand komut = new SqlCommand();
@@ -39,10 +40,10 @@ namespace Technolife
         }
 
         //--------------------------------------------------------------------------------------------------------------------------------------
-        //Takım Bilgilerini Görüntülemek İçin SQL Üzerinde Yazılmış Olan Prosedürü Kullanarak Veriyi Tabloya Aktarıyoruz.
+        //Takım Bilgilerini Görüntülemek İçin SQL Üzerinde Yazılmış Olan Prosedürü (TeamInfo) Kullanarak Veriyi Tabloya Aktarıyoruz.
         void TeamInfoShow()
         {
-            komut = new SqlCommand("TeamInfo", Connect.Connect());
+            komut = new SqlCommand("TeamInfo", Connect.Connect()); //Proc
             komut.CommandType = CommandType.StoredProcedure;
             komut.Parameters.AddWithValue("@EkipID", LoginForm.EkipID);
             SqlDataAdapter da = new SqlDataAdapter(komut);
@@ -52,10 +53,10 @@ namespace Technolife
             komut.ExecuteNonQuery();
             Connect.Connect().Close();
         }
-        //Proje Bilgilerini Görüntülemek İçin SQL Üzerinde Yazılmış Olan Prosedürü Kullanarak Veriyi Tabloya Aktarıyoruz.
+        //Proje Bilgilerini Görüntülemek İçin SQL Üzerinde Yazılmış Olan Prosedürü (ShowProjectInfo) Kullanarak Veriyi Tabloya Aktarıyoruz.
         void ProjectInformationShow()
         {
-            komut = new SqlCommand("ShowProjectInfo", Connect.Connect());
+            komut = new SqlCommand("ShowProjectInfo", Connect.Connect()); //Proc
             komut.CommandType = CommandType.StoredProcedure;
             komut.Parameters.AddWithValue("@EkipID", LoginForm.EkipID);
             SqlDataAdapter da = new SqlDataAdapter(komut);
@@ -70,34 +71,35 @@ namespace Technolife
         //Görev ComboBox'ının Doldurulması
         void MissionCBText()
         {
-            komut = new SqlCommand("Select * From tblGorev", Connect.Connect());
+            komut = new SqlCommand("Select * From ShowGorevID", Connect.Connect()); //View
             SqlDataAdapter da = new SqlDataAdapter(komut);
             DataTable dt = new DataTable();
             da.Fill(dt);
-            CBMission.ValueMember = "GorevID";
+            CBMission.ValueMember = "Görev ID";
             CBMission.DataSource = dt;
+
         }
         //Proje Kategori ComboBox'ının Doldurulması
         void ProjectCategoryText()
         {
-            komut = new SqlCommand("SELECT * FROM tblKategori", Connect.Connect());
+            komut = new SqlCommand("SELECT * FROM ShowKategoriID", Connect.Connect()); //View
             SqlDataAdapter da = new SqlDataAdapter(komut);
             DataTable dt = new DataTable();
             da.Fill(dt);
-            ProjectCategoryComboBox.ValueMember = "kategoriID";
+            ProjectCategoryComboBox.ValueMember = "Kategori ID";
             ProjectCategoryComboBox.DataSource = dt;
-            UpdatePCategoryTextBox.ValueMember = "kategoriID";
+            UpdatePCategoryTextBox.ValueMember = "Kategori ID";
             UpdatePCategoryTextBox.DataSource = dt;
         }
         //ProjectID ComboBox'ının Doldurulması
         void ProjectIDText()
         {
-            komut = new SqlCommand("SELECT * FROM tblProje WHERE ekipID=@p1", Connect.Connect());
+            komut = new SqlCommand("SELECT * FROM ShowProjeID WHERE ekipID=@p1", Connect.Connect()); //View
             komut.Parameters.AddWithValue("@p1", LoginForm.EkipID);
             SqlDataAdapter da = new SqlDataAdapter(komut);
             DataTable dt = new DataTable();
             da.Fill(dt);
-            UpdateProjectIDComboBox.ValueMember = "projeID";
+            UpdateProjectIDComboBox.ValueMember = "Proje ID";
             UpdateProjectIDComboBox.DataSource = dt;
         }
 
@@ -126,11 +128,11 @@ namespace Technolife
         //--------------------------------------------------------------------------------------------------------------------------------------
 
 
-        //Projelerin Genel Puan Bilgilerini SQL üzerinde yadığımız View yardımıyla getiriyoruz.
+        //Projelerin Genel Puan Bilgilerini SQL üzerinde yadığımız (View) yardımıyla getiriyoruz.
         private void CaptanProjectInfoFlatButton_Click(object sender, EventArgs e)
         {
             Visibility(true, false, false, false);
-            komut = new SqlCommand("SELECT * FROM ProjectScoreRanking", Connect.Connect());
+            komut = new SqlCommand("SELECT * FROM ProjectScoreRanking", Connect.Connect()); //View
             SqlDataAdapter da = new SqlDataAdapter(komut);
             DataTable dt = new DataTable();
             da.Fill(dt);
@@ -141,6 +143,7 @@ namespace Technolife
         //SQL üzerinde tanımlamış olduğumuz TeamInfo Prosedürü kullanılarak Ekip üyesinin ait olduğu ekibe dair bilgileri getiriyoruz.
         private void CaptainTeamInfoFlatButton_Click(object sender, EventArgs e)
         {
+            Visibility(true, false, false, false);
             TeamInfoShow();
         }
 
@@ -183,7 +186,7 @@ namespace Technolife
         {
             Visibility(false,false,true,false);
         }
-        //Yeni Projeyi Sisteme Ekleme
+        //Yeni Projeyi Sisteme Ekleme(PROC)
         private void NewProjectAddButton_Click(object sender, EventArgs e)
         {
             Visibility(true, false, false, false);
@@ -211,10 +214,10 @@ namespace Technolife
         //Projeleri Görüntüleme Ve Düzenleme
         private void ProjectAlterFlatButton_Click(object sender, EventArgs e)
         {
-            Visibility(false, false, false, true);
+            Visibility(true, false, false, true);
             ProjectInformationShow();
         }
-        //Proje Bilgilerini Güncelleme İşlemleri
+        //Proje Bilgilerini Güncelleme İşlemleri (PROC)
         private void UpdateProjectButton_Click(object sender, EventArgs e)
         {
             Visibility(true, false, false, false);

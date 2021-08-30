@@ -48,43 +48,41 @@ namespace Technolife
         // ProjeID'leri Seçim İçin ComboBox İçerisine Atıyoruz.
         void PUComboBox()
         {
-            komut = new SqlCommand("Select * From tblProje", Connect.Connect());
+            komut = new SqlCommand("Select * From ShowProjeID", Connect.Connect()); //View
             SqlDataAdapter da = new SqlDataAdapter(komut);
             DataTable dt = new DataTable();
             da.Fill(dt);
-            PointUpdateComboBox.ValueMember = "ProjeID";
+            PointUpdateComboBox.ValueMember = "Proje ID";
             PointUpdateComboBox.DataSource = dt;
         }
         // KullanıcıID'lerin Seçim İle ComboBox İçerisine Atılması
         void UserID()
         {
-            komut = new SqlCommand("Select * From tblKullanici", Connect.Connect());
+            komut = new SqlCommand("Select * From ShowUserInfo", Connect.Connect()); //View
             SqlDataAdapter da = new SqlDataAdapter(komut);
             DataTable dt = new DataTable();
             da.Fill(dt);
             DelUserComboBox.ValueMember = "kullaniciID";
             DelUserComboBox.DataSource = dt;
         }
-
         // KategoriID'lerin Seçim İle ComboBox İçerisine Atılması
         void CategoryID()
         {
-            komut = new SqlCommand("Select * From tblKategori", Connect.Connect());
+            komut = new SqlCommand("SELECT * FROM ShowKategoriID", Connect.Connect()); //View
             SqlDataAdapter da = new SqlDataAdapter(komut);
             DataTable dt = new DataTable();
             da.Fill(dt);
-            DelCategoryComboBox.ValueMember = "kategoriID";
+            DelCategoryComboBox.ValueMember = "Kategori ID";
             DelCategoryComboBox.DataSource = dt;
         }
-
         // EkipID'lerin Seçim İle ComboBox İçerisine Atılması
         void TeamID()
         {
-            komut = new SqlCommand("Select * From tblEkip", Connect.Connect());
+            komut = new SqlCommand("Select * From ShowEkipID", Connect.Connect()); //View
             SqlDataAdapter da = new SqlDataAdapter(komut);
             DataTable dt = new DataTable();
             da.Fill(dt);
-            DelTeamComboBox.ValueMember = "ekipID";
+            DelTeamComboBox.ValueMember = "Ekip ID";
             DelTeamComboBox.DataSource = dt;
         }
 
@@ -94,7 +92,7 @@ namespace Technolife
         //Proje Bilgilerini Görüntülenmesi - View
         void ProjectShow()
         {
-            komut = new SqlCommand("SELECT * FROM ProjectScoreRanking", Connect.Connect());
+            komut = new SqlCommand("SELECT * FROM ProjectScoreRanking", Connect.Connect()); //View
             SqlDataAdapter da = new SqlDataAdapter(komut);
             DataTable dt = new DataTable();
             da.Fill(dt);
@@ -104,7 +102,7 @@ namespace Technolife
         //Kullanıcılara Dair Tüm Bilgileri SQL View Yardımıyla Tabloya Çekiyoruz
         void ShowUserInfo()
         {
-            komut = new SqlCommand("SELECT * FROM ShowUserInfo", Connect.Connect());
+            komut = new SqlCommand("SELECT * FROM ShowUserInfo", Connect.Connect()); //View
             SqlDataAdapter da = new SqlDataAdapter(komut);
             DataTable dt = new DataTable();
             da.Fill(dt);
@@ -114,7 +112,7 @@ namespace Technolife
         //Kategorilere Dair Bilgileri Tabloya Çekiyoruz
         void CategoryInfo()
         {
-            komut = new SqlCommand("SELECT * FROM tblKategori", Connect.Connect());
+            komut = new SqlCommand("SELECT * FROM ShowCategoryInfo", Connect.Connect()); //View
             SqlDataAdapter da = new SqlDataAdapter(komut);
             DataTable dt = new DataTable();
             da.Fill(dt);
@@ -124,7 +122,7 @@ namespace Technolife
         //Ekiplere Dair Bilgileri Tabloya Çekiyoruz
         void TeamInfo()
         {
-            komut = new SqlCommand("SELECT * FROM tblEkip", Connect.Connect());
+            komut = new SqlCommand("SELECT * FROM showTeamInfo", Connect.Connect()); //View
             SqlDataAdapter da = new SqlDataAdapter(komut);
             DataTable dt = new DataTable();
             da.Fill(dt);
@@ -141,7 +139,7 @@ namespace Technolife
             VisibleJuri(true,true,false,false,false);
             ProjectShow();
         }
-        //Değerlerin  Girilmesini Ardından SQL Procedur Yardımıyla Puan Değerinin Güncellenmesi
+        //Değerlerin  Girilmesini Ardından SQL Prosedür (PROCEDURE) Yardımıyla Puan Değerinin Güncellenmesi
         private void PointUpdateButton_Click(object sender, EventArgs e)
         {
             komut = new SqlCommand("UpdProjectPoint", Connect.Connect());
