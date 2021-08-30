@@ -34,6 +34,17 @@ namespace Technolife
             PointUpdateComboBox.DataSource = dt;
         }
 
+        //Kullanıcılara Dair Tüm Bilgileri SQL View Yardımıyla Tabloya Çekiyoruz
+        void ShowUserInfo()
+        {
+            komut = new SqlCommand("SELECT * FROM ShowUserInfo", Connect.Connect());
+            SqlDataAdapter da = new SqlDataAdapter(komut);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            JuriUyesiDataGrid.DataSource = dt;
+            Connect.Connect().Close();
+        }
+
         //----------------------------------------------------------------------------------------------------------------------------
         //Database'e bağlanabilmek ve kullanabilmek için tanımlamış olduğum bağlantıyı çağırıyorum.
         SqlConnect Connect = new SqlConnect();
@@ -78,6 +89,26 @@ namespace Technolife
                 ProjectShow();
                 MessageBox.Show("Proje Bilginiz Sistem Üzerinde Güncellenmiştir. 'OK'a Bastıktan Sonra Güncel Tablo Üzerinden Kontrol Edebilirsiniz.");
             }
+        }
+        //Tüm Kullanıcılara Ait Bilgileri SQL İçerisinde Tanımladığımız VIEW ile kolaylıkla gerçekleştiriyoruz.
+        private void AllUsersInfoFlatButton_Click(object sender, EventArgs e)
+        {
+            ShowUserInfo();
+            PointUpdateGroupBox.Visible = false;
+            JuriUyesiDataGrid.Visible = true;
+        }
+
+        private void RedCategoryFlatButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        //Yarışmacıyı Sistem Üzerinde Silme İşlemini Gerçekleştirmek İçin SQL üzerinde PROC (DelUser)'ı kullanıyoruz.
+        private void RedTheUserFlatButton_Click(object sender, EventArgs e)
+        {
+            komut = new SqlCommand("DelUser", Connect.Connect());
+            komut.CommandType = CommandType.StoredProcedure;
+            komut.Parameters.AddWithValue("@kullaniciID", PointUpdateComboBox.Text);
         }
     }
 }

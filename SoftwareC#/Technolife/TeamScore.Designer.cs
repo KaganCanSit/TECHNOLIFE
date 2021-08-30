@@ -62,7 +62,7 @@ namespace Technolife
             this.TopTextLabel.BackColor = System.Drawing.Color.Transparent;
             this.TopTextLabel.Font = new System.Drawing.Font("Gotham Medium", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.TopTextLabel.ForeColor = System.Drawing.Color.Black;
-            this.TopTextLabel.Location = new System.Drawing.Point(198, 30);
+            this.TopTextLabel.Location = new System.Drawing.Point(285, 36);
             this.TopTextLabel.Name = "TopTextLabel";
             this.TopTextLabel.Size = new System.Drawing.Size(206, 22);
             this.TopTextLabel.TabIndex = 2;
@@ -73,7 +73,7 @@ namespace Technolife
             this.DownTextLabel.AutoSize = true;
             this.DownTextLabel.BackColor = System.Drawing.Color.Transparent;
             this.DownTextLabel.ForeColor = System.Drawing.Color.Black;
-            this.DownTextLabel.Location = new System.Drawing.Point(178, 71);
+            this.DownTextLabel.Location = new System.Drawing.Point(260, 67);
             this.DownTextLabel.Name = "DownTextLabel";
             this.DownTextLabel.Size = new System.Drawing.Size(255, 26);
             this.DownTextLabel.TabIndex = 3;
@@ -120,7 +120,7 @@ namespace Technolife
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.InfoText;
             this.ScoreDataGrid.RowsDefaultCellStyle = dataGridViewCellStyle5;
-            this.ScoreDataGrid.Size = new System.Drawing.Size(453, 486);
+            this.ScoreDataGrid.Size = new System.Drawing.Size(628, 486);
             this.ScoreDataGrid.TabIndex = 4;
             // 
             // TeamScoreForm
@@ -130,7 +130,7 @@ namespace Technolife
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(465, 629);
+            this.ClientSize = new System.Drawing.Size(639, 629);
             this.Controls.Add(this.ScoreDataGrid);
             this.Controls.Add(this.DownTextLabel);
             this.Controls.Add(this.TopTextLabel);
