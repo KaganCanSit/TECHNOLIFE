@@ -68,7 +68,17 @@ namespace Technolife
             DelTeamComboBox.ValueMember = "ekipID";
             DelTeamComboBox.DataSource = dt;
         }
+        //----------------------------------------------------------------------------------------------------------------------------
 
+        //Genel Bileşenlerin Görünümünü Her Seferinde Yazmamak İçin Bir Fonksiyon Tanımlayarak Değerleri Parametre Olarak Alıp Form Görünümünü Ayarlama
+        void VisibleJuri(bool datagrid, bool pointUpdate, bool delUser, bool delCategory, bool delTeam )
+        {
+            JuriUyesiDataGrid.Visible = datagrid;
+            PointUpdateGroupBox.Visible = pointUpdate;          
+            DelUserGroupBox.Visible = delUser;
+            DelCategoryGroupBox.Visible = delCategory;
+            DelTeamGroupBox.Visible = delTeam;
+        }
 
         //----------------------------------------------------------------------------------------------------------------------------
         //Database'e bağlanabilmek ve kullanabilmek için tanımlamış olduğum bağlantıyı çağırıyorum.
@@ -120,10 +130,7 @@ namespace Technolife
         //Projeleri Görüntüle Ve Puanını DÜzenle
         private void AllProjectInfoFlatButton_Click(object sender, EventArgs e)
         {
-            JuriUyesiDataGrid.Visible = true;
-            PointUpdateGroupBox.Visible = true;
-            DelUserGroupBox.Visible = false;
-            DelCategoryGroupBox.Visible = false;
+            VisibleJuri(true,true,false,false,false);
             ProjectShow();
         }
         //Değerlerin  Girilmesini Ardından SQL Procedur Yardımıyla Puan Değerinin Güncellenmesi
@@ -151,11 +158,7 @@ namespace Technolife
         private void AllUsersInfoFlatButton_Click(object sender, EventArgs e)
         {
             ShowUserInfo();
-            PointUpdateGroupBox.Visible = false;
-            JuriUyesiDataGrid.Visible = true;
-            DelUserGroupBox.Visible = true;
-            DelCategoryGroupBox.Visible = false;
-            DelTeamGroupBox.Visible = false;
+            VisibleJuri(true, false, true, false, false);
         }
         //Yarışmacıyı Sistem Üzerinde Silme İşlemini Gerçekleştirmek İçin SQL üzerinde PROC (DelUser)'ı kullanıyoruz.
         private void DeleteUserButton_Click(object sender, EventArgs e)
@@ -179,11 +182,7 @@ namespace Technolife
         //Kategori Silme İşlemi Öncesi Görünürlük Ayarlaması ve Verilerin Getirilmesi
         private void RedCategoryFlatButton_Click(object sender, EventArgs e)
         {
-            PointUpdateGroupBox.Visible = false;
-            JuriUyesiDataGrid.Visible = true;
-            DelUserGroupBox.Visible = false;
-            DelCategoryGroupBox.Visible = true;
-            DelTeamGroupBox.Visible = false;
+            VisibleJuri(true, false, false, true, false);
             CategoryInfo();
         }
         //Kategoriyi Sistem Üzerinde Silme İşlemini Gerçekleştirmek İçin SQL üzerinde PROC (DelCategory)'i kullanıyoruz.
@@ -208,11 +207,7 @@ namespace Technolife
         //Takım Silme İşlemi Öncesi Görünürlük Ayarlaması ve Verilerin Getirilmesi
         private void RedTheTeamFlatButton_Click(object sender, EventArgs e)
         {
-            PointUpdateGroupBox.Visible = false;
-            JuriUyesiDataGrid.Visible = true;
-            DelUserGroupBox.Visible = false;
-            DelCategoryGroupBox.Visible = false;
-            DelTeamGroupBox.Visible = true;
+            VisibleJuri(true, false, false, false, true);
             TeamInfo();
         }
         //Takımı Sistem Üzerinde Silme İşlemini Gerçekleştirmek İçin SQL üzerinde PROC (DelTeam)'i kullanıyoruz.
