@@ -32,7 +32,6 @@ namespace Technolife
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(JuriUyesiForm));
             this.EkipUyesiMenuGP = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.RedCategoryFlatButton = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.RedTheUserFlatButton = new Bunifu.Framework.UI.BunifuFlatButton();
             this.AllUsersInfoFlatButton = new Bunifu.Framework.UI.BunifuFlatButton();
             this.RedTheTeamFlatButton = new Bunifu.Framework.UI.BunifuFlatButton();
             this.AllProjectInfoFlatButton = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -47,11 +46,23 @@ namespace Technolife
             this.PointUpdateValueTextBox = new System.Windows.Forms.TextBox();
             this.PointUpdateValueLabel = new System.Windows.Forms.Label();
             this.DelUserGroupBox = new System.Windows.Forms.GroupBox();
-            this.DelUserComboBox = new System.Windows.Forms.ComboBox();
-            this.DelUserLabel = new System.Windows.Forms.Label();
-            this.DelUserInfoLabel = new System.Windows.Forms.Label();
-            this.DeleteUserButton = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.DeleteUserButton = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.DelUserInfoLabel = new System.Windows.Forms.Label();
+            this.DelUserLabel = new System.Windows.Forms.Label();
+            this.DelUserComboBox = new System.Windows.Forms.ComboBox();
+            this.DelCategoryGroupBox = new System.Windows.Forms.GroupBox();
+            this.bunifuImageButton2 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.DelCategoryButton = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.DelCategoryInfoLabel = new System.Windows.Forms.Label();
+            this.DelCategoryLabel = new System.Windows.Forms.Label();
+            this.DelCategoryComboBox = new System.Windows.Forms.ComboBox();
+            this.DelTeamGroupBox = new System.Windows.Forms.GroupBox();
+            this.bunifuImageButton3 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.DelTeamButton = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.DelTeamInfoLabel = new System.Windows.Forms.Label();
+            this.DelTeamLabel = new System.Windows.Forms.Label();
+            this.DelTeamComboBox = new System.Windows.Forms.ComboBox();
             this.EkipUyesiMenuGP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LogoImage2Button)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.JuriUyesiDataGrid)).BeginInit();
@@ -59,6 +70,10 @@ namespace Technolife
             ((System.ComponentModel.ISupportInitialize)(this.PointUpdateLogo)).BeginInit();
             this.DelUserGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
+            this.DelCategoryGroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
+            this.DelTeamGroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).BeginInit();
             this.SuspendLayout();
             // 
             // EkipUyesiMenuGP
@@ -68,7 +83,6 @@ namespace Technolife
             this.EkipUyesiMenuGP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.EkipUyesiMenuGP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.EkipUyesiMenuGP.Controls.Add(this.RedCategoryFlatButton);
-            this.EkipUyesiMenuGP.Controls.Add(this.RedTheUserFlatButton);
             this.EkipUyesiMenuGP.Controls.Add(this.AllUsersInfoFlatButton);
             this.EkipUyesiMenuGP.Controls.Add(this.RedTheTeamFlatButton);
             this.EkipUyesiMenuGP.Controls.Add(this.AllProjectInfoFlatButton);
@@ -103,8 +117,8 @@ namespace Technolife
             this.RedCategoryFlatButton.IconVisible = true;
             this.RedCategoryFlatButton.IconZoom = 90D;
             this.RedCategoryFlatButton.IsTab = false;
-            this.RedCategoryFlatButton.Location = new System.Drawing.Point(641, -1);
-            this.RedCategoryFlatButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RedCategoryFlatButton.Location = new System.Drawing.Point(614, -1);
+            this.RedCategoryFlatButton.Margin = new System.Windows.Forms.Padding(4);
             this.RedCategoryFlatButton.Name = "RedCategoryFlatButton";
             this.RedCategoryFlatButton.Normalcolor = System.Drawing.Color.Transparent;
             this.RedCategoryFlatButton.OnHovercolor = System.Drawing.Color.Aquamarine;
@@ -118,49 +132,14 @@ namespace Technolife
             this.RedCategoryFlatButton.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RedCategoryFlatButton.Click += new System.EventHandler(this.RedCategoryFlatButton_Click);
             // 
-            // RedTheUserFlatButton
-            // 
-            this.RedTheUserFlatButton.Activecolor = System.Drawing.Color.MediumSpringGreen;
-            this.RedTheUserFlatButton.BackColor = System.Drawing.Color.Transparent;
-            this.RedTheUserFlatButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.RedTheUserFlatButton.BorderRadius = 0;
-            this.RedTheUserFlatButton.ButtonText = "Yarışmacıyı Diskalifiye Et";
-            this.RedTheUserFlatButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.RedTheUserFlatButton.DisabledColor = System.Drawing.Color.Gray;
-            this.RedTheUserFlatButton.Iconcolor = System.Drawing.Color.Transparent;
-            this.RedTheUserFlatButton.Iconimage = null;
-            this.RedTheUserFlatButton.Iconimage_right = null;
-            this.RedTheUserFlatButton.Iconimage_right_Selected = null;
-            this.RedTheUserFlatButton.Iconimage_Selected = null;
-            this.RedTheUserFlatButton.IconMarginLeft = 0;
-            this.RedTheUserFlatButton.IconMarginRight = 0;
-            this.RedTheUserFlatButton.IconRightVisible = true;
-            this.RedTheUserFlatButton.IconRightZoom = 0D;
-            this.RedTheUserFlatButton.IconVisible = true;
-            this.RedTheUserFlatButton.IconZoom = 90D;
-            this.RedTheUserFlatButton.IsTab = false;
-            this.RedTheUserFlatButton.Location = new System.Drawing.Point(446, -1);
-            this.RedTheUserFlatButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.RedTheUserFlatButton.Name = "RedTheUserFlatButton";
-            this.RedTheUserFlatButton.Normalcolor = System.Drawing.Color.Transparent;
-            this.RedTheUserFlatButton.OnHovercolor = System.Drawing.Color.Aquamarine;
-            this.RedTheUserFlatButton.OnHoverTextColor = System.Drawing.Color.White;
-            this.RedTheUserFlatButton.selected = false;
-            this.RedTheUserFlatButton.Size = new System.Drawing.Size(150, 44);
-            this.RedTheUserFlatButton.TabIndex = 5;
-            this.RedTheUserFlatButton.Text = "Yarışmacıyı Diskalifiye Et";
-            this.RedTheUserFlatButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.RedTheUserFlatButton.Textcolor = System.Drawing.Color.Black;
-            this.RedTheUserFlatButton.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RedTheUserFlatButton.Click += new System.EventHandler(this.RedTheUserFlatButton_Click);
-            // 
             // AllUsersInfoFlatButton
             // 
             this.AllUsersInfoFlatButton.Activecolor = System.Drawing.Color.MediumSpringGreen;
             this.AllUsersInfoFlatButton.BackColor = System.Drawing.Color.Transparent;
             this.AllUsersInfoFlatButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.AllUsersInfoFlatButton.BorderRadius = 0;
-            this.AllUsersInfoFlatButton.ButtonText = "Sisteme Kayıtlı Kullanıcıların Bilgilerini Görüntüle";
+            this.AllUsersInfoFlatButton.ButtonText = "Sisteme Kayıtlı Kullanıcıların Bilgilerini Görüntüle Ve Yarışmacıyı Diskalifiye E" +
+    "t";
             this.AllUsersInfoFlatButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.AllUsersInfoFlatButton.DisabledColor = System.Drawing.Color.Gray;
             this.AllUsersInfoFlatButton.Iconcolor = System.Drawing.Color.Transparent;
@@ -175,16 +154,17 @@ namespace Technolife
             this.AllUsersInfoFlatButton.IconVisible = true;
             this.AllUsersInfoFlatButton.IconZoom = 90D;
             this.AllUsersInfoFlatButton.IsTab = false;
-            this.AllUsersInfoFlatButton.Location = new System.Drawing.Point(251, -1);
-            this.AllUsersInfoFlatButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.AllUsersInfoFlatButton.Location = new System.Drawing.Point(274, -1);
+            this.AllUsersInfoFlatButton.Margin = new System.Windows.Forms.Padding(4);
             this.AllUsersInfoFlatButton.Name = "AllUsersInfoFlatButton";
             this.AllUsersInfoFlatButton.Normalcolor = System.Drawing.Color.Transparent;
             this.AllUsersInfoFlatButton.OnHovercolor = System.Drawing.Color.Aquamarine;
             this.AllUsersInfoFlatButton.OnHoverTextColor = System.Drawing.Color.White;
             this.AllUsersInfoFlatButton.selected = false;
-            this.AllUsersInfoFlatButton.Size = new System.Drawing.Size(167, 44);
+            this.AllUsersInfoFlatButton.Size = new System.Drawing.Size(274, 44);
             this.AllUsersInfoFlatButton.TabIndex = 4;
-            this.AllUsersInfoFlatButton.Text = "Sisteme Kayıtlı Kullanıcıların Bilgilerini Görüntüle";
+            this.AllUsersInfoFlatButton.Text = "Sisteme Kayıtlı Kullanıcıların Bilgilerini Görüntüle Ve Yarışmacıyı Diskalifiye E" +
+    "t";
             this.AllUsersInfoFlatButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.AllUsersInfoFlatButton.Textcolor = System.Drawing.Color.Black;
             this.AllUsersInfoFlatButton.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -212,7 +192,7 @@ namespace Technolife
             this.RedTheTeamFlatButton.IconZoom = 90D;
             this.RedTheTeamFlatButton.IsTab = false;
             this.RedTheTeamFlatButton.Location = new System.Drawing.Point(830, -1);
-            this.RedTheTeamFlatButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RedTheTeamFlatButton.Margin = new System.Windows.Forms.Padding(4);
             this.RedTheTeamFlatButton.Name = "RedTheTeamFlatButton";
             this.RedTheTeamFlatButton.Normalcolor = System.Drawing.Color.Transparent;
             this.RedTheTeamFlatButton.OnHovercolor = System.Drawing.Color.Aquamarine;
@@ -224,6 +204,7 @@ namespace Technolife
             this.RedTheTeamFlatButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.RedTheTeamFlatButton.Textcolor = System.Drawing.Color.Black;
             this.RedTheTeamFlatButton.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RedTheTeamFlatButton.Click += new System.EventHandler(this.RedTheTeamFlatButton_Click);
             // 
             // AllProjectInfoFlatButton
             // 
@@ -247,7 +228,7 @@ namespace Technolife
             this.AllProjectInfoFlatButton.IconZoom = 90D;
             this.AllProjectInfoFlatButton.IsTab = false;
             this.AllProjectInfoFlatButton.Location = new System.Drawing.Point(-1, -1);
-            this.AllProjectInfoFlatButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.AllProjectInfoFlatButton.Margin = new System.Windows.Forms.Padding(4);
             this.AllProjectInfoFlatButton.Name = "AllProjectInfoFlatButton";
             this.AllProjectInfoFlatButton.Normalcolor = System.Drawing.Color.Transparent;
             this.AllProjectInfoFlatButton.OnHovercolor = System.Drawing.Color.Aquamarine;
@@ -295,9 +276,9 @@ namespace Technolife
             this.PointUpdateGroupBox.Controls.Add(this.PointUpdateValueTextBox);
             this.PointUpdateGroupBox.Controls.Add(this.PointUpdateValueLabel);
             this.PointUpdateGroupBox.Location = new System.Drawing.Point(10, 504);
-            this.PointUpdateGroupBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PointUpdateGroupBox.Margin = new System.Windows.Forms.Padding(2);
             this.PointUpdateGroupBox.Name = "PointUpdateGroupBox";
-            this.PointUpdateGroupBox.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PointUpdateGroupBox.Padding = new System.Windows.Forms.Padding(2);
             this.PointUpdateGroupBox.Size = new System.Drawing.Size(1084, 148);
             this.PointUpdateGroupBox.TabIndex = 23;
             this.PointUpdateGroupBox.TabStop = false;
@@ -308,7 +289,7 @@ namespace Technolife
             // 
             this.PointUpdateComboBox.FormattingEnabled = true;
             this.PointUpdateComboBox.Location = new System.Drawing.Point(87, 67);
-            this.PointUpdateComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PointUpdateComboBox.Margin = new System.Windows.Forms.Padding(2);
             this.PointUpdateComboBox.Name = "PointUpdateComboBox";
             this.PointUpdateComboBox.Size = new System.Drawing.Size(122, 21);
             this.PointUpdateComboBox.TabIndex = 11;
@@ -340,7 +321,7 @@ namespace Technolife
             this.PointUpdateLogo.Image = ((System.Drawing.Image)(resources.GetObject("PointUpdateLogo.Image")));
             this.PointUpdateLogo.ImageActive = null;
             this.PointUpdateLogo.Location = new System.Drawing.Point(457, 30);
-            this.PointUpdateLogo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PointUpdateLogo.Margin = new System.Windows.Forms.Padding(2);
             this.PointUpdateLogo.Name = "PointUpdateLogo";
             this.PointUpdateLogo.Size = new System.Drawing.Size(90, 88);
             this.PointUpdateLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -370,7 +351,7 @@ namespace Technolife
             this.PointUpdateButton.IconZoom = 90D;
             this.PointUpdateButton.IsTab = false;
             this.PointUpdateButton.Location = new System.Drawing.Point(561, 58);
-            this.PointUpdateButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PointUpdateButton.Margin = new System.Windows.Forms.Padding(4);
             this.PointUpdateButton.Name = "PointUpdateButton";
             this.PointUpdateButton.Normalcolor = System.Drawing.Color.LightSalmon;
             this.PointUpdateButton.OnHovercolor = System.Drawing.Color.Aquamarine;
@@ -387,7 +368,7 @@ namespace Technolife
             // PointUpdateValueTextBox
             // 
             this.PointUpdateValueTextBox.Location = new System.Drawing.Point(297, 67);
-            this.PointUpdateValueTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PointUpdateValueTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.PointUpdateValueTextBox.Name = "PointUpdateValueTextBox";
             this.PointUpdateValueTextBox.Size = new System.Drawing.Size(122, 20);
             this.PointUpdateValueTextBox.TabIndex = 3;
@@ -415,33 +396,21 @@ namespace Technolife
             this.DelUserGroupBox.TabIndex = 12;
             this.DelUserGroupBox.TabStop = false;
             this.DelUserGroupBox.Text = "Yarışmacıyı Silme / Diskalifiye Etme İşlemleri";
+            this.DelUserGroupBox.Visible = false;
             // 
-            // DelUserComboBox
+            // bunifuImageButton1
             // 
-            this.DelUserComboBox.FormattingEnabled = true;
-            this.DelUserComboBox.Location = new System.Drawing.Point(104, 67);
-            this.DelUserComboBox.Name = "DelUserComboBox";
-            this.DelUserComboBox.Size = new System.Drawing.Size(121, 21);
-            this.DelUserComboBox.TabIndex = 0;
-            // 
-            // DelUserLabel
-            // 
-            this.DelUserLabel.AutoSize = true;
-            this.DelUserLabel.Location = new System.Drawing.Point(35, 69);
-            this.DelUserLabel.Name = "DelUserLabel";
-            this.DelUserLabel.Size = new System.Drawing.Size(63, 13);
-            this.DelUserLabel.TabIndex = 1;
-            this.DelUserLabel.Text = "Kullanıcı ID:";
-            // 
-            // DelUserInfoLabel
-            // 
-            this.DelUserInfoLabel.AutoSize = true;
-            this.DelUserInfoLabel.Location = new System.Drawing.Point(35, 30);
-            this.DelUserInfoLabel.Name = "DelUserInfoLabel";
-            this.DelUserInfoLabel.Size = new System.Drawing.Size(190, 26);
-            this.DelUserInfoLabel.TabIndex = 2;
-            this.DelUserInfoLabel.Text = "Sistem Üzerinden Kaldırmak İstediğiniz \r\nKullanıcının ID Numarasını Seçiniz";
-            this.DelUserInfoLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuImageButton1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuImageButton1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.ErrorImage")));
+            this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
+            this.bunifuImageButton1.ImageActive = null;
+            this.bunifuImageButton1.Location = new System.Drawing.Point(281, 23);
+            this.bunifuImageButton1.Name = "bunifuImageButton1";
+            this.bunifuImageButton1.Size = new System.Drawing.Size(92, 86);
+            this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton1.TabIndex = 24;
+            this.bunifuImageButton1.TabStop = false;
+            this.bunifuImageButton1.Zoom = 10;
             // 
             // DeleteUserButton
             // 
@@ -466,8 +435,9 @@ namespace Technolife
             this.DeleteUserButton.IconZoom = 90D;
             this.DeleteUserButton.IsTab = false;
             this.DeleteUserButton.Location = new System.Drawing.Point(379, 61);
+            this.DeleteUserButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.DeleteUserButton.Name = "DeleteUserButton";
-            this.DeleteUserButton.Normalcolor = System.Drawing.Color.Transparent;
+            this.DeleteUserButton.Normalcolor = System.Drawing.Color.LightSalmon;
             this.DeleteUserButton.OnHovercolor = System.Drawing.Color.Aquamarine;
             this.DeleteUserButton.OnHoverTextColor = System.Drawing.Color.White;
             this.DeleteUserButton.selected = false;
@@ -477,20 +447,220 @@ namespace Technolife
             this.DeleteUserButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.DeleteUserButton.Textcolor = System.Drawing.Color.Black;
             this.DeleteUserButton.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeleteUserButton.Click += new System.EventHandler(this.DeleteUserButton_Click);
             // 
-            // bunifuImageButton1
+            // DelUserInfoLabel
             // 
-            this.bunifuImageButton1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuImageButton1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.ErrorImage")));
-            this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
-            this.bunifuImageButton1.ImageActive = null;
-            this.bunifuImageButton1.Location = new System.Drawing.Point(281, 23);
-            this.bunifuImageButton1.Name = "bunifuImageButton1";
-            this.bunifuImageButton1.Size = new System.Drawing.Size(92, 86);
-            this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuImageButton1.TabIndex = 24;
-            this.bunifuImageButton1.TabStop = false;
-            this.bunifuImageButton1.Zoom = 10;
+            this.DelUserInfoLabel.AutoSize = true;
+            this.DelUserInfoLabel.Location = new System.Drawing.Point(35, 30);
+            this.DelUserInfoLabel.Name = "DelUserInfoLabel";
+            this.DelUserInfoLabel.Size = new System.Drawing.Size(190, 26);
+            this.DelUserInfoLabel.TabIndex = 2;
+            this.DelUserInfoLabel.Text = "Sistem Üzerinden Kaldırmak İstediğiniz \r\nKullanıcının ID Numarasını Seçiniz";
+            this.DelUserInfoLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // DelUserLabel
+            // 
+            this.DelUserLabel.AutoSize = true;
+            this.DelUserLabel.Location = new System.Drawing.Point(35, 69);
+            this.DelUserLabel.Name = "DelUserLabel";
+            this.DelUserLabel.Size = new System.Drawing.Size(63, 13);
+            this.DelUserLabel.TabIndex = 1;
+            this.DelUserLabel.Text = "Kullanıcı ID:";
+            // 
+            // DelUserComboBox
+            // 
+            this.DelUserComboBox.FormattingEnabled = true;
+            this.DelUserComboBox.Location = new System.Drawing.Point(104, 67);
+            this.DelUserComboBox.Name = "DelUserComboBox";
+            this.DelUserComboBox.Size = new System.Drawing.Size(121, 21);
+            this.DelUserComboBox.TabIndex = 0;
+            // 
+            // DelCategoryGroupBox
+            // 
+            this.DelCategoryGroupBox.Controls.Add(this.bunifuImageButton2);
+            this.DelCategoryGroupBox.Controls.Add(this.DelCategoryButton);
+            this.DelCategoryGroupBox.Controls.Add(this.DelCategoryInfoLabel);
+            this.DelCategoryGroupBox.Controls.Add(this.DelCategoryLabel);
+            this.DelCategoryGroupBox.Controls.Add(this.DelCategoryComboBox);
+            this.DelCategoryGroupBox.Location = new System.Drawing.Point(8, 504);
+            this.DelCategoryGroupBox.Name = "DelCategoryGroupBox";
+            this.DelCategoryGroupBox.Size = new System.Drawing.Size(1084, 148);
+            this.DelCategoryGroupBox.TabIndex = 25;
+            this.DelCategoryGroupBox.TabStop = false;
+            this.DelCategoryGroupBox.Text = "Kategori Silme İşlemleri";
+            this.DelCategoryGroupBox.Visible = false;
+            // 
+            // bunifuImageButton2
+            // 
+            this.bunifuImageButton2.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuImageButton2.ErrorImage = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton2.ErrorImage")));
+            this.bunifuImageButton2.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton2.Image")));
+            this.bunifuImageButton2.ImageActive = null;
+            this.bunifuImageButton2.Location = new System.Drawing.Point(281, 23);
+            this.bunifuImageButton2.Name = "bunifuImageButton2";
+            this.bunifuImageButton2.Size = new System.Drawing.Size(92, 86);
+            this.bunifuImageButton2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton2.TabIndex = 24;
+            this.bunifuImageButton2.TabStop = false;
+            this.bunifuImageButton2.Zoom = 10;
+            // 
+            // DelCategoryButton
+            // 
+            this.DelCategoryButton.Activecolor = System.Drawing.Color.MediumSpringGreen;
+            this.DelCategoryButton.BackColor = System.Drawing.Color.LightSalmon;
+            this.DelCategoryButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.DelCategoryButton.BorderRadius = 0;
+            this.DelCategoryButton.ButtonText = "Kategoriyi Sonlandır";
+            this.DelCategoryButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.DelCategoryButton.DisabledColor = System.Drawing.Color.Gray;
+            this.DelCategoryButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.DelCategoryButton.Iconcolor = System.Drawing.Color.Transparent;
+            this.DelCategoryButton.Iconimage = null;
+            this.DelCategoryButton.Iconimage_right = null;
+            this.DelCategoryButton.Iconimage_right_Selected = null;
+            this.DelCategoryButton.Iconimage_Selected = null;
+            this.DelCategoryButton.IconMarginLeft = 0;
+            this.DelCategoryButton.IconMarginRight = 0;
+            this.DelCategoryButton.IconRightVisible = true;
+            this.DelCategoryButton.IconRightZoom = 0D;
+            this.DelCategoryButton.IconVisible = true;
+            this.DelCategoryButton.IconZoom = 90D;
+            this.DelCategoryButton.IsTab = false;
+            this.DelCategoryButton.Location = new System.Drawing.Point(379, 61);
+            this.DelCategoryButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DelCategoryButton.Name = "DelCategoryButton";
+            this.DelCategoryButton.Normalcolor = System.Drawing.Color.LightSalmon;
+            this.DelCategoryButton.OnHovercolor = System.Drawing.Color.Aquamarine;
+            this.DelCategoryButton.OnHoverTextColor = System.Drawing.Color.White;
+            this.DelCategoryButton.selected = false;
+            this.DelCategoryButton.Size = new System.Drawing.Size(175, 26);
+            this.DelCategoryButton.TabIndex = 7;
+            this.DelCategoryButton.Text = "Kategoriyi Sonlandır";
+            this.DelCategoryButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.DelCategoryButton.Textcolor = System.Drawing.Color.Black;
+            this.DelCategoryButton.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DelCategoryButton.Click += new System.EventHandler(this.DelCategoryButton_Click);
+            // 
+            // DelCategoryInfoLabel
+            // 
+            this.DelCategoryInfoLabel.AutoSize = true;
+            this.DelCategoryInfoLabel.Location = new System.Drawing.Point(35, 30);
+            this.DelCategoryInfoLabel.Name = "DelCategoryInfoLabel";
+            this.DelCategoryInfoLabel.Size = new System.Drawing.Size(190, 26);
+            this.DelCategoryInfoLabel.TabIndex = 2;
+            this.DelCategoryInfoLabel.Text = "Sistem Üzerinden Kaldırmak İstediğiniz \r\nKategorinin ID Numarasını Seçiniz";
+            this.DelCategoryInfoLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // DelCategoryLabel
+            // 
+            this.DelCategoryLabel.AutoSize = true;
+            this.DelCategoryLabel.Location = new System.Drawing.Point(35, 69);
+            this.DelCategoryLabel.Name = "DelCategoryLabel";
+            this.DelCategoryLabel.Size = new System.Drawing.Size(63, 13);
+            this.DelCategoryLabel.TabIndex = 1;
+            this.DelCategoryLabel.Text = "Kategori ID:";
+            // 
+            // DelCategoryComboBox
+            // 
+            this.DelCategoryComboBox.FormattingEnabled = true;
+            this.DelCategoryComboBox.Location = new System.Drawing.Point(104, 67);
+            this.DelCategoryComboBox.Name = "DelCategoryComboBox";
+            this.DelCategoryComboBox.Size = new System.Drawing.Size(121, 21);
+            this.DelCategoryComboBox.TabIndex = 0;
+            // 
+            // DelTeamGroupBox
+            // 
+            this.DelTeamGroupBox.Controls.Add(this.bunifuImageButton3);
+            this.DelTeamGroupBox.Controls.Add(this.DelTeamButton);
+            this.DelTeamGroupBox.Controls.Add(this.DelTeamInfoLabel);
+            this.DelTeamGroupBox.Controls.Add(this.DelTeamLabel);
+            this.DelTeamGroupBox.Controls.Add(this.DelTeamComboBox);
+            this.DelTeamGroupBox.Location = new System.Drawing.Point(5, 504);
+            this.DelTeamGroupBox.Name = "DelTeamGroupBox";
+            this.DelTeamGroupBox.Size = new System.Drawing.Size(1084, 148);
+            this.DelTeamGroupBox.TabIndex = 26;
+            this.DelTeamGroupBox.TabStop = false;
+            this.DelTeamGroupBox.Text = "Takım Silme/Diskalifiye İşlemleri";
+            this.DelTeamGroupBox.Visible = false;
+            // 
+            // bunifuImageButton3
+            // 
+            this.bunifuImageButton3.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuImageButton3.ErrorImage = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton3.ErrorImage")));
+            this.bunifuImageButton3.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton3.Image")));
+            this.bunifuImageButton3.ImageActive = null;
+            this.bunifuImageButton3.Location = new System.Drawing.Point(281, 23);
+            this.bunifuImageButton3.Name = "bunifuImageButton3";
+            this.bunifuImageButton3.Size = new System.Drawing.Size(92, 86);
+            this.bunifuImageButton3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton3.TabIndex = 24;
+            this.bunifuImageButton3.TabStop = false;
+            this.bunifuImageButton3.Zoom = 10;
+            // 
+            // DelTeamButton
+            // 
+            this.DelTeamButton.Activecolor = System.Drawing.Color.MediumSpringGreen;
+            this.DelTeamButton.BackColor = System.Drawing.Color.LightSalmon;
+            this.DelTeamButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.DelTeamButton.BorderRadius = 0;
+            this.DelTeamButton.ButtonText = "Takımı Sil/Diskalifiye Et";
+            this.DelTeamButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.DelTeamButton.DisabledColor = System.Drawing.Color.Gray;
+            this.DelTeamButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.DelTeamButton.Iconcolor = System.Drawing.Color.Transparent;
+            this.DelTeamButton.Iconimage = null;
+            this.DelTeamButton.Iconimage_right = null;
+            this.DelTeamButton.Iconimage_right_Selected = null;
+            this.DelTeamButton.Iconimage_Selected = null;
+            this.DelTeamButton.IconMarginLeft = 0;
+            this.DelTeamButton.IconMarginRight = 0;
+            this.DelTeamButton.IconRightVisible = true;
+            this.DelTeamButton.IconRightZoom = 0D;
+            this.DelTeamButton.IconVisible = true;
+            this.DelTeamButton.IconZoom = 90D;
+            this.DelTeamButton.IsTab = false;
+            this.DelTeamButton.Location = new System.Drawing.Point(379, 61);
+            this.DelTeamButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DelTeamButton.Name = "DelTeamButton";
+            this.DelTeamButton.Normalcolor = System.Drawing.Color.LightSalmon;
+            this.DelTeamButton.OnHovercolor = System.Drawing.Color.Aquamarine;
+            this.DelTeamButton.OnHoverTextColor = System.Drawing.Color.White;
+            this.DelTeamButton.selected = false;
+            this.DelTeamButton.Size = new System.Drawing.Size(175, 26);
+            this.DelTeamButton.TabIndex = 7;
+            this.DelTeamButton.Text = "Takımı Sil/Diskalifiye Et";
+            this.DelTeamButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.DelTeamButton.Textcolor = System.Drawing.Color.Black;
+            this.DelTeamButton.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DelTeamButton.Click += new System.EventHandler(this.DelTeamButton_Click);
+            // 
+            // DelTeamInfoLabel
+            // 
+            this.DelTeamInfoLabel.AutoSize = true;
+            this.DelTeamInfoLabel.Location = new System.Drawing.Point(35, 30);
+            this.DelTeamInfoLabel.Name = "DelTeamInfoLabel";
+            this.DelTeamInfoLabel.Size = new System.Drawing.Size(190, 26);
+            this.DelTeamInfoLabel.TabIndex = 2;
+            this.DelTeamInfoLabel.Text = "Sistem Üzerinden Kaldırmak İstediğiniz \r\nEkibin ID Numarasını Seçiniz";
+            this.DelTeamInfoLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // DelTeamLabel
+            // 
+            this.DelTeamLabel.AutoSize = true;
+            this.DelTeamLabel.Location = new System.Drawing.Point(35, 69);
+            this.DelTeamLabel.Name = "DelTeamLabel";
+            this.DelTeamLabel.Size = new System.Drawing.Size(45, 13);
+            this.DelTeamLabel.TabIndex = 1;
+            this.DelTeamLabel.Text = "Ekip ID:";
+            // 
+            // DelTeamComboBox
+            // 
+            this.DelTeamComboBox.FormattingEnabled = true;
+            this.DelTeamComboBox.Location = new System.Drawing.Point(104, 67);
+            this.DelTeamComboBox.Name = "DelTeamComboBox";
+            this.DelTeamComboBox.Size = new System.Drawing.Size(121, 21);
+            this.DelTeamComboBox.TabIndex = 0;
             // 
             // JuriUyesiForm
             // 
@@ -499,6 +669,8 @@ namespace Technolife
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1099, 661);
+            this.Controls.Add(this.DelTeamGroupBox);
+            this.Controls.Add(this.DelCategoryGroupBox);
             this.Controls.Add(this.DelUserGroupBox);
             this.Controls.Add(this.PointUpdateGroupBox);
             this.Controls.Add(this.JuriUyesiDataGrid);
@@ -519,6 +691,12 @@ namespace Technolife
             this.DelUserGroupBox.ResumeLayout(false);
             this.DelUserGroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
+            this.DelCategoryGroupBox.ResumeLayout(false);
+            this.DelCategoryGroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).EndInit();
+            this.DelTeamGroupBox.ResumeLayout(false);
+            this.DelTeamGroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -530,7 +708,6 @@ namespace Technolife
         private Bunifu.Framework.UI.BunifuFlatButton AllProjectInfoFlatButton;
         private Bunifu.Framework.UI.BunifuImageButton LogoImage2Button;
         private Bunifu.Framework.UI.BunifuFlatButton AllUsersInfoFlatButton;
-        private Bunifu.Framework.UI.BunifuFlatButton RedTheUserFlatButton;
         private Bunifu.Framework.UI.BunifuFlatButton RedCategoryFlatButton;
         private System.Windows.Forms.DataGridView JuriUyesiDataGrid;
         private System.Windows.Forms.GroupBox PointUpdateGroupBox;
@@ -547,5 +724,17 @@ namespace Technolife
         private System.Windows.Forms.Label DelUserInfoLabel;
         private System.Windows.Forms.Label DelUserLabel;
         private System.Windows.Forms.ComboBox DelUserComboBox;
+        private System.Windows.Forms.GroupBox DelCategoryGroupBox;
+        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton2;
+        private Bunifu.Framework.UI.BunifuFlatButton DelCategoryButton;
+        private System.Windows.Forms.Label DelCategoryInfoLabel;
+        private System.Windows.Forms.Label DelCategoryLabel;
+        private System.Windows.Forms.ComboBox DelCategoryComboBox;
+        private System.Windows.Forms.GroupBox DelTeamGroupBox;
+        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton3;
+        private Bunifu.Framework.UI.BunifuFlatButton DelTeamButton;
+        private System.Windows.Forms.Label DelTeamInfoLabel;
+        private System.Windows.Forms.Label DelTeamLabel;
+        private System.Windows.Forms.ComboBox DelTeamComboBox;
     }
 }

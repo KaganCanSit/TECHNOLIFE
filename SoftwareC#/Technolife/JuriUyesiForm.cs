@@ -21,6 +21,9 @@ namespace Technolife
         private void JuriUyesiForm_Load(object sender, EventArgs e)
         {
             PUComboBox();
+            UserID();
+            CategoryID();
+            TeamID();
         }
         
         // ProjeID'leri Seçim İçin ComboBox İçerisine Atıyoruz.
@@ -33,17 +36,39 @@ namespace Technolife
             PointUpdateComboBox.ValueMember = "ProjeID";
             PointUpdateComboBox.DataSource = dt;
         }
-
-        //Kullanıcılara Dair Tüm Bilgileri SQL View Yardımıyla Tabloya Çekiyoruz
-        void ShowUserInfo()
+        // KullanıcıID'lerin Seçim İle ComboBox İçerisine Atılması
+        void UserID()
         {
-            komut = new SqlCommand("SELECT * FROM ShowUserInfo", Connect.Connect());
+            komut = new SqlCommand("Select * From tblKullanici", Connect.Connect());
             SqlDataAdapter da = new SqlDataAdapter(komut);
             DataTable dt = new DataTable();
             da.Fill(dt);
-            JuriUyesiDataGrid.DataSource = dt;
-            Connect.Connect().Close();
+            DelUserComboBox.ValueMember = "kullaniciID";
+            DelUserComboBox.DataSource = dt;
         }
+
+        // KategoriID'lerin Seçim İle ComboBox İçerisine Atılması
+        void CategoryID()
+        {
+            komut = new SqlCommand("Select * From tblKategori", Connect.Connect());
+            SqlDataAdapter da = new SqlDataAdapter(komut);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            DelCategoryComboBox.ValueMember = "kategoriID";
+            DelCategoryComboBox.DataSource = dt;
+        }
+
+        // EkipID'lerin Seçim İle ComboBox İçerisine Atılması
+        void TeamID()
+        {
+            komut = new SqlCommand("Select * From tblEkip", Connect.Connect());
+            SqlDataAdapter da = new SqlDataAdapter(komut);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            DelTeamComboBox.ValueMember = "ekipID";
+            DelTeamComboBox.DataSource = dt;
+        }
+
 
         //----------------------------------------------------------------------------------------------------------------------------
         //Database'e bağlanabilmek ve kullanabilmek için tanımlamış olduğum bağlantıyı çağırıyorum.
@@ -60,7 +85,36 @@ namespace Technolife
             JuriUyesiDataGrid.DataSource = dt;
             Connect.Connect().Close();
         }
-
+        //Kullanıcılara Dair Tüm Bilgileri SQL View Yardımıyla Tabloya Çekiyoruz
+        void ShowUserInfo()
+        {
+            komut = new SqlCommand("SELECT * FROM ShowUserInfo", Connect.Connect());
+            SqlDataAdapter da = new SqlDataAdapter(komut);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            JuriUyesiDataGrid.DataSource = dt;
+            Connect.Connect().Close();
+        }
+        //Kategorilere Dair Bilgileri Tabloya Çekiyoruz
+        void CategoryInfo()
+        {
+            komut = new SqlCommand("SELECT * FROM tblKategori", Connect.Connect());
+            SqlDataAdapter da = new SqlDataAdapter(komut);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            JuriUyesiDataGrid.DataSource = dt;
+            Connect.Connect().Close();
+        }
+        //Ekiplere Dair Bilgileri Tabloya Çekiyoruz
+        void TeamInfo()
+        {
+            komut = new SqlCommand("SELECT * FROM tblEkip", Connect.Connect());
+            SqlDataAdapter da = new SqlDataAdapter(komut);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            JuriUyesiDataGrid.DataSource = dt;
+            Connect.Connect().Close();
+        }
 
         //----------------------------------------------------------------------------------------------------------------------------
         //Projeleri Görüntüle Ve Puanını DÜzenle
@@ -68,6 +122,8 @@ namespace Technolife
         {
             JuriUyesiDataGrid.Visible = true;
             PointUpdateGroupBox.Visible = true;
+            DelUserGroupBox.Visible = false;
+            DelCategoryGroupBox.Visible = false;
             ProjectShow();
         }
         //Değerlerin  Girilmesini Ardından SQL Procedur Yardımıyla Puan Değerinin Güncellenmesi
@@ -90,25 +146,92 @@ namespace Technolife
                 MessageBox.Show("Proje Bilginiz Sistem Üzerinde Güncellenmiştir. 'OK'a Bastıktan Sonra Güncel Tablo Üzerinden Kontrol Edebilirsiniz.");
             }
         }
+
         //Tüm Kullanıcılara Ait Bilgileri SQL İçerisinde Tanımladığımız VIEW ile kolaylıkla gerçekleştiriyoruz.
         private void AllUsersInfoFlatButton_Click(object sender, EventArgs e)
         {
             ShowUserInfo();
             PointUpdateGroupBox.Visible = false;
             JuriUyesiDataGrid.Visible = true;
+            DelUserGroupBox.Visible = true;
+            DelCategoryGroupBox.Visible = false;
+            DelTeamGroupBox.Visible = false;
         }
-
-        private void RedCategoryFlatButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
         //Yarışmacıyı Sistem Üzerinde Silme İşlemini Gerçekleştirmek İçin SQL üzerinde PROC (DelUser)'ı kullanıyoruz.
-        private void RedTheUserFlatButton_Click(object sender, EventArgs e)
+        private void DeleteUserButton_Click(object sender, EventArgs e)
         {
             komut = new SqlCommand("DelUser", Connect.Connect());
             komut.CommandType = CommandType.StoredProcedure;
-            komut.Parameters.AddWithValue("@kullaniciID", PointUpdateComboBox.Text);
+            komut.Parameters.AddWithValue("@kullaniciID", DelUserComboBox.Text);
+            if (DelUserComboBox.Text == "")
+            {
+                MessageBox.Show("Boş değer bırakmayınız. Lütfen Kullanıcı ID numarası giriniz. Lütfen kontrol ederek yeniden deneyiniz.");
+            }
+            else
+            {
+                komut.ExecuteNonQuery();
+                Connect.Connect().Close();
+                ShowUserInfo();
+                MessageBox.Show("Kullanıcı Sistem Üzerinden Silinmiştir. 'OK'a Bastıktan Sonra Güncel Tablo Üzerinden Kontrol Edebilirsiniz.");
+            }
+        }
+
+        //Kategori Silme İşlemi Öncesi Görünürlük Ayarlaması ve Verilerin Getirilmesi
+        private void RedCategoryFlatButton_Click(object sender, EventArgs e)
+        {
+            PointUpdateGroupBox.Visible = false;
+            JuriUyesiDataGrid.Visible = true;
+            DelUserGroupBox.Visible = false;
+            DelCategoryGroupBox.Visible = true;
+            DelTeamGroupBox.Visible = false;
+            CategoryInfo();
+        }
+        //Kategoriyi Sistem Üzerinde Silme İşlemini Gerçekleştirmek İçin SQL üzerinde PROC (DelCategory)'i kullanıyoruz.
+        private void DelCategoryButton_Click(object sender, EventArgs e)
+        {
+            komut = new SqlCommand("DelCategory", Connect.Connect());
+            komut.CommandType = CommandType.StoredProcedure;
+            komut.Parameters.AddWithValue("@kategoriID", DelCategoryComboBox.Text);
+            if (DelCategoryComboBox.Text == "")
+            {
+                MessageBox.Show("Boş değer bırakmayınız. Lütfen Kategori ID numarası giriniz. Lütfen kontrol ederek yeniden deneyiniz.");
+            }
+            else
+            {
+                komut.ExecuteNonQuery();
+                Connect.Connect().Close();
+                CategoryInfo();
+                MessageBox.Show("Kategori Sistem Üzerinden Silinmiştir. 'OK'a Bastıktan Sonra Güncel Tablo Üzerinden Kontrol Edebilirsiniz.");
+            }
+        }
+
+        //Takım Silme İşlemi Öncesi Görünürlük Ayarlaması ve Verilerin Getirilmesi
+        private void RedTheTeamFlatButton_Click(object sender, EventArgs e)
+        {
+            PointUpdateGroupBox.Visible = false;
+            JuriUyesiDataGrid.Visible = true;
+            DelUserGroupBox.Visible = false;
+            DelCategoryGroupBox.Visible = false;
+            DelTeamGroupBox.Visible = true;
+            TeamInfo();
+        }
+        //Takımı Sistem Üzerinde Silme İşlemini Gerçekleştirmek İçin SQL üzerinde PROC (DelTeam)'i kullanıyoruz.
+        private void DelTeamButton_Click(object sender, EventArgs e)
+        {
+            komut = new SqlCommand("DelTeam", Connect.Connect());
+            komut.CommandType = CommandType.StoredProcedure;
+            komut.Parameters.AddWithValue("@ekipID", DelTeamComboBox.Text);
+            if (DelTeamComboBox.Text == "")
+            {
+                MessageBox.Show("Boş değer bırakmayınız. Lütfen Ekip ID numarası giriniz. Lütfen kontrol ederek yeniden deneyiniz.");
+            }
+            else
+            {
+                komut.ExecuteNonQuery();
+                Connect.Connect().Close();
+                TeamInfo();
+                MessageBox.Show("Ekip Sistem Üzerinden Silinmiştir. 'OK'a Bastıktan Sonra Güncel Tablo Üzerinden Kontrol Edebilirsiniz.");
+            }
         }
     }
 }
