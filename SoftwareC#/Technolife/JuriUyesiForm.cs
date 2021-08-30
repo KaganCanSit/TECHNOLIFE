@@ -25,7 +25,26 @@ namespace Technolife
             CategoryID();
             TeamID();
         }
-        
+
+        //----------------------------------------------------------------------------------------------------------------------------
+        //Database'e bağlanabilmek ve kullanabilmek için tanımlamış olduğum bağlantıyı çağırıyorum.
+        SqlConnect Connect = new SqlConnect();
+        SqlCommand komut = new SqlCommand();
+
+
+        //----------------------------------------------------------------------------------------------------------------------------
+        //Genel Bileşenlerin Görünümünü Her Seferinde Yazmamak İçin Bir Fonksiyon Tanımlayarak Değerleri Parametre Olarak Alıp Form Görünümünü Ayarlama
+        void VisibleJuri(bool datagrid, bool pointUpdate, bool delUser, bool delCategory, bool delTeam)
+        {
+            JuriUyesiDataGrid.Visible = datagrid;
+            PointUpdateGroupBox.Visible = pointUpdate;
+            DelUserGroupBox.Visible = delUser;
+            DelCategoryGroupBox.Visible = delCategory;
+            DelTeamGroupBox.Visible = delTeam;
+        }
+
+
+        //----------------------------------------------------------------------------------------------------------------------------
         // ProjeID'leri Seçim İçin ComboBox İçerisine Atıyoruz.
         void PUComboBox()
         {
@@ -68,23 +87,10 @@ namespace Technolife
             DelTeamComboBox.ValueMember = "ekipID";
             DelTeamComboBox.DataSource = dt;
         }
-        //----------------------------------------------------------------------------------------------------------------------------
 
-        //Genel Bileşenlerin Görünümünü Her Seferinde Yazmamak İçin Bir Fonksiyon Tanımlayarak Değerleri Parametre Olarak Alıp Form Görünümünü Ayarlama
-        void VisibleJuri(bool datagrid, bool pointUpdate, bool delUser, bool delCategory, bool delTeam )
-        {
-            JuriUyesiDataGrid.Visible = datagrid;
-            PointUpdateGroupBox.Visible = pointUpdate;          
-            DelUserGroupBox.Visible = delUser;
-            DelCategoryGroupBox.Visible = delCategory;
-            DelTeamGroupBox.Visible = delTeam;
-        }
+
 
         //----------------------------------------------------------------------------------------------------------------------------
-        //Database'e bağlanabilmek ve kullanabilmek için tanımlamış olduğum bağlantıyı çağırıyorum.
-        SqlConnect Connect = new SqlConnect();
-        SqlCommand komut = new SqlCommand();
-
         //Proje Bilgilerini Görüntülenmesi - View
         void ProjectShow()
         {
@@ -125,6 +131,8 @@ namespace Technolife
             JuriUyesiDataGrid.DataSource = dt;
             Connect.Connect().Close();
         }
+
+
 
         //----------------------------------------------------------------------------------------------------------------------------
         //Projeleri Görüntüle Ve Puanını DÜzenle
