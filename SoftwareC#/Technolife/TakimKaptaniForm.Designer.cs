@@ -71,6 +71,9 @@ namespace Technolife
             this.ProjectNameLabel = new System.Windows.Forms.Label();
             this.ProjectCategoryLabel = new System.Windows.Forms.Label();
             this.ProjectUpdateGroupBox = new System.Windows.Forms.GroupBox();
+            this.UpdateProjectIDComboBox = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.UpdateProjectIDLabel = new System.Windows.Forms.Label();
             this.UpdateProjecLogo = new Bunifu.Framework.UI.BunifuImageButton();
             this.UpdateProjectButton = new Bunifu.Framework.UI.BunifuFlatButton();
             this.UpdateCategoryInfoButton = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -80,9 +83,6 @@ namespace Technolife
             this.UpdatePInfoLabel = new System.Windows.Forms.Label();
             this.UpdatePNameLabel = new System.Windows.Forms.Label();
             this.UpdatePCategoryLabel = new System.Windows.Forms.Label();
-            this.UpdateProjectIDLabel = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.UpdateProjectIDComboBox = new System.Windows.Forms.ComboBox();
             this.EkipUyesiMenuGP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LogoImageButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TakimKaptaniDataGrid)).BeginInit();
@@ -109,11 +109,10 @@ namespace Technolife
             this.EkipUyesiMenuGP.GradientBottomRight = System.Drawing.Color.LightSalmon;
             this.EkipUyesiMenuGP.GradientTopLeft = System.Drawing.Color.MistyRose;
             this.EkipUyesiMenuGP.GradientTopRight = System.Drawing.Color.MistyRose;
-            this.EkipUyesiMenuGP.Location = new System.Drawing.Point(140, 36);
-            this.EkipUyesiMenuGP.Margin = new System.Windows.Forms.Padding(4);
+            this.EkipUyesiMenuGP.Location = new System.Drawing.Point(105, 29);
             this.EkipUyesiMenuGP.Name = "EkipUyesiMenuGP";
             this.EkipUyesiMenuGP.Quality = 10;
-            this.EkipUyesiMenuGP.Size = new System.Drawing.Size(1310, 56);
+            this.EkipUyesiMenuGP.Size = new System.Drawing.Size(983, 46);
             this.EkipUyesiMenuGP.TabIndex = 2;
             // 
             // NewProjectFlatButton
@@ -137,14 +136,14 @@ namespace Technolife
             this.NewProjectFlatButton.IconVisible = true;
             this.NewProjectFlatButton.IconZoom = 90D;
             this.NewProjectFlatButton.IsTab = false;
-            this.NewProjectFlatButton.Location = new System.Drawing.Point(732, -1);
-            this.NewProjectFlatButton.Margin = new System.Windows.Forms.Padding(5);
+            this.NewProjectFlatButton.Location = new System.Drawing.Point(549, -1);
+            this.NewProjectFlatButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.NewProjectFlatButton.Name = "NewProjectFlatButton";
             this.NewProjectFlatButton.Normalcolor = System.Drawing.Color.Transparent;
             this.NewProjectFlatButton.OnHovercolor = System.Drawing.Color.Aquamarine;
             this.NewProjectFlatButton.OnHoverTextColor = System.Drawing.Color.White;
             this.NewProjectFlatButton.selected = false;
-            this.NewProjectFlatButton.Size = new System.Drawing.Size(200, 54);
+            this.NewProjectFlatButton.Size = new System.Drawing.Size(150, 44);
             this.NewProjectFlatButton.TabIndex = 6;
             this.NewProjectFlatButton.Text = "Yeni Proje Başlat";
             this.NewProjectFlatButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -173,14 +172,14 @@ namespace Technolife
             this.ProjectAlterFlatButton.IconVisible = true;
             this.ProjectAlterFlatButton.IconZoom = 90D;
             this.ProjectAlterFlatButton.IsTab = false;
-            this.ProjectAlterFlatButton.Location = new System.Drawing.Point(976, -1);
-            this.ProjectAlterFlatButton.Margin = new System.Windows.Forms.Padding(5);
+            this.ProjectAlterFlatButton.Location = new System.Drawing.Point(732, -1);
+            this.ProjectAlterFlatButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ProjectAlterFlatButton.Name = "ProjectAlterFlatButton";
             this.ProjectAlterFlatButton.Normalcolor = System.Drawing.Color.Transparent;
             this.ProjectAlterFlatButton.OnHovercolor = System.Drawing.Color.Aquamarine;
             this.ProjectAlterFlatButton.OnHoverTextColor = System.Drawing.Color.White;
             this.ProjectAlterFlatButton.selected = false;
-            this.ProjectAlterFlatButton.Size = new System.Drawing.Size(328, 54);
+            this.ProjectAlterFlatButton.Size = new System.Drawing.Size(246, 44);
             this.ProjectAlterFlatButton.TabIndex = 5;
             this.ProjectAlterFlatButton.Text = "Ekibim Tarafından Geliştirilen Projeleri Görüntüle ve Düzenle";
             this.ProjectAlterFlatButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -209,14 +208,14 @@ namespace Technolife
             this.NewUsersAddFalatButton.IconVisible = true;
             this.NewUsersAddFalatButton.IconZoom = 90D;
             this.NewUsersAddFalatButton.IsTab = false;
-            this.NewUsersAddFalatButton.Location = new System.Drawing.Point(488, -1);
-            this.NewUsersAddFalatButton.Margin = new System.Windows.Forms.Padding(5);
+            this.NewUsersAddFalatButton.Location = new System.Drawing.Point(366, -1);
+            this.NewUsersAddFalatButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.NewUsersAddFalatButton.Name = "NewUsersAddFalatButton";
             this.NewUsersAddFalatButton.Normalcolor = System.Drawing.Color.Transparent;
             this.NewUsersAddFalatButton.OnHovercolor = System.Drawing.Color.Aquamarine;
             this.NewUsersAddFalatButton.OnHoverTextColor = System.Drawing.Color.White;
             this.NewUsersAddFalatButton.selected = false;
-            this.NewUsersAddFalatButton.Size = new System.Drawing.Size(200, 54);
+            this.NewUsersAddFalatButton.Size = new System.Drawing.Size(150, 44);
             this.NewUsersAddFalatButton.TabIndex = 4;
             this.NewUsersAddFalatButton.Text = "Ekibe Yeni Kişi Ekle";
             this.NewUsersAddFalatButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -245,14 +244,14 @@ namespace Technolife
             this.CaptanProjectInfoFlatButton.IconVisible = true;
             this.CaptanProjectInfoFlatButton.IconZoom = 90D;
             this.CaptanProjectInfoFlatButton.IsTab = false;
-            this.CaptanProjectInfoFlatButton.Location = new System.Drawing.Point(244, -1);
-            this.CaptanProjectInfoFlatButton.Margin = new System.Windows.Forms.Padding(5);
+            this.CaptanProjectInfoFlatButton.Location = new System.Drawing.Point(183, -1);
+            this.CaptanProjectInfoFlatButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.CaptanProjectInfoFlatButton.Name = "CaptanProjectInfoFlatButton";
             this.CaptanProjectInfoFlatButton.Normalcolor = System.Drawing.Color.Transparent;
             this.CaptanProjectInfoFlatButton.OnHovercolor = System.Drawing.Color.Aquamarine;
             this.CaptanProjectInfoFlatButton.OnHoverTextColor = System.Drawing.Color.White;
             this.CaptanProjectInfoFlatButton.selected = false;
-            this.CaptanProjectInfoFlatButton.Size = new System.Drawing.Size(200, 54);
+            this.CaptanProjectInfoFlatButton.Size = new System.Drawing.Size(150, 44);
             this.CaptanProjectInfoFlatButton.TabIndex = 3;
             this.CaptanProjectInfoFlatButton.Text = "Proje Puan Durumlarını Görüntüle";
             this.CaptanProjectInfoFlatButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -282,13 +281,13 @@ namespace Technolife
             this.CaptainTeamInfoFlatButton.IconZoom = 90D;
             this.CaptainTeamInfoFlatButton.IsTab = false;
             this.CaptainTeamInfoFlatButton.Location = new System.Drawing.Point(0, -1);
-            this.CaptainTeamInfoFlatButton.Margin = new System.Windows.Forms.Padding(5);
+            this.CaptainTeamInfoFlatButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.CaptainTeamInfoFlatButton.Name = "CaptainTeamInfoFlatButton";
             this.CaptainTeamInfoFlatButton.Normalcolor = System.Drawing.Color.Transparent;
             this.CaptainTeamInfoFlatButton.OnHovercolor = System.Drawing.Color.Aquamarine;
             this.CaptainTeamInfoFlatButton.OnHoverTextColor = System.Drawing.Color.White;
             this.CaptainTeamInfoFlatButton.selected = false;
-            this.CaptainTeamInfoFlatButton.Size = new System.Drawing.Size(200, 54);
+            this.CaptainTeamInfoFlatButton.Size = new System.Drawing.Size(150, 44);
             this.CaptainTeamInfoFlatButton.TabIndex = 2;
             this.CaptainTeamInfoFlatButton.Text = "Ekibimi Görüntüle";
             this.CaptainTeamInfoFlatButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -302,10 +301,9 @@ namespace Technolife
             this.LogoImageButton.ErrorImage = ((System.Drawing.Image)(resources.GetObject("LogoImageButton.ErrorImage")));
             this.LogoImageButton.Image = ((System.Drawing.Image)(resources.GetObject("LogoImageButton.Image")));
             this.LogoImageButton.ImageActive = null;
-            this.LogoImageButton.Location = new System.Drawing.Point(8, 10);
-            this.LogoImageButton.Margin = new System.Windows.Forms.Padding(4);
+            this.LogoImageButton.Location = new System.Drawing.Point(6, 8);
             this.LogoImageButton.Name = "LogoImageButton";
-            this.LogoImageButton.Size = new System.Drawing.Size(124, 103);
+            this.LogoImageButton.Size = new System.Drawing.Size(93, 84);
             this.LogoImageButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.LogoImageButton.TabIndex = 3;
             this.LogoImageButton.TabStop = false;
@@ -314,11 +312,10 @@ namespace Technolife
             // TakimKaptaniDataGrid
             // 
             this.TakimKaptaniDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.TakimKaptaniDataGrid.Location = new System.Drawing.Point(8, 121);
-            this.TakimKaptaniDataGrid.Margin = new System.Windows.Forms.Padding(4);
+            this.TakimKaptaniDataGrid.Location = new System.Drawing.Point(6, 98);
             this.TakimKaptaniDataGrid.Name = "TakimKaptaniDataGrid";
             this.TakimKaptaniDataGrid.RowHeadersWidth = 51;
-            this.TakimKaptaniDataGrid.Size = new System.Drawing.Size(1443, 489);
+            this.TakimKaptaniDataGrid.Size = new System.Drawing.Size(1082, 397);
             this.TakimKaptaniDataGrid.TabIndex = 4;
             this.TakimKaptaniDataGrid.Visible = false;
             // 
@@ -345,11 +342,9 @@ namespace Technolife
             this.NewUserGroupBox.Controls.Add(this.SurnameLabel);
             this.NewUserGroupBox.Controls.Add(this.NameLabel);
             this.NewUserGroupBox.Controls.Add(this.MissionLabel);
-            this.NewUserGroupBox.Location = new System.Drawing.Point(8, 618);
-            this.NewUserGroupBox.Margin = new System.Windows.Forms.Padding(4);
+            this.NewUserGroupBox.Location = new System.Drawing.Point(6, 502);
             this.NewUserGroupBox.Name = "NewUserGroupBox";
-            this.NewUserGroupBox.Padding = new System.Windows.Forms.Padding(4);
-            this.NewUserGroupBox.Size = new System.Drawing.Size(1443, 182);
+            this.NewUserGroupBox.Size = new System.Drawing.Size(1082, 148);
             this.NewUserGroupBox.TabIndex = 5;
             this.NewUserGroupBox.TabStop = false;
             this.NewUserGroupBox.Text = "Ekibinizin Yeni Üyesinin Bilgilerini Giriniz";
@@ -377,14 +372,14 @@ namespace Technolife
             this.MissionInfoButton.IconVisible = true;
             this.MissionInfoButton.IconZoom = 80D;
             this.MissionInfoButton.IsTab = false;
-            this.MissionInfoButton.Location = new System.Drawing.Point(437, 145);
-            this.MissionInfoButton.Margin = new System.Windows.Forms.Padding(5);
+            this.MissionInfoButton.Location = new System.Drawing.Point(328, 118);
+            this.MissionInfoButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MissionInfoButton.Name = "MissionInfoButton";
             this.MissionInfoButton.Normalcolor = System.Drawing.Color.LightSalmon;
             this.MissionInfoButton.OnHovercolor = System.Drawing.Color.Aquamarine;
             this.MissionInfoButton.OnHoverTextColor = System.Drawing.Color.White;
             this.MissionInfoButton.selected = false;
-            this.MissionInfoButton.Size = new System.Drawing.Size(161, 30);
+            this.MissionInfoButton.Size = new System.Drawing.Size(121, 24);
             this.MissionInfoButton.TabIndex = 20;
             this.MissionInfoButton.Text = "Görev Açıklamaları";
             this.MissionInfoButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -395,10 +390,9 @@ namespace Technolife
             // CBMission
             // 
             this.CBMission.FormattingEnabled = true;
-            this.CBMission.Location = new System.Drawing.Point(437, 108);
-            this.CBMission.Margin = new System.Windows.Forms.Padding(4);
+            this.CBMission.Location = new System.Drawing.Point(328, 88);
             this.CBMission.Name = "CBMission";
-            this.CBMission.Size = new System.Drawing.Size(160, 24);
+            this.CBMission.Size = new System.Drawing.Size(121, 21);
             this.CBMission.TabIndex = 19;
             // 
             // ReadBookImageButton
@@ -407,10 +401,9 @@ namespace Technolife
             this.ReadBookImageButton.ErrorImage = ((System.Drawing.Image)(resources.GetObject("ReadBookImageButton.ErrorImage")));
             this.ReadBookImageButton.Image = ((System.Drawing.Image)(resources.GetObject("ReadBookImageButton.Image")));
             this.ReadBookImageButton.ImageActive = null;
-            this.ReadBookImageButton.Location = new System.Drawing.Point(987, 31);
-            this.ReadBookImageButton.Margin = new System.Windows.Forms.Padding(4);
+            this.ReadBookImageButton.Location = new System.Drawing.Point(740, 25);
             this.ReadBookImageButton.Name = "ReadBookImageButton";
-            this.ReadBookImageButton.Size = new System.Drawing.Size(124, 103);
+            this.ReadBookImageButton.Size = new System.Drawing.Size(93, 84);
             this.ReadBookImageButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ReadBookImageButton.TabIndex = 6;
             this.ReadBookImageButton.TabStop = false;
@@ -438,14 +431,14 @@ namespace Technolife
             this.AddUserFlatButton.IconVisible = true;
             this.AddUserFlatButton.IconZoom = 80D;
             this.AddUserFlatButton.IsTab = false;
-            this.AddUserFlatButton.Location = new System.Drawing.Point(1119, 59);
-            this.AddUserFlatButton.Margin = new System.Windows.Forms.Padding(5);
+            this.AddUserFlatButton.Location = new System.Drawing.Point(839, 48);
+            this.AddUserFlatButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.AddUserFlatButton.Name = "AddUserFlatButton";
             this.AddUserFlatButton.Normalcolor = System.Drawing.Color.LightSalmon;
             this.AddUserFlatButton.OnHovercolor = System.Drawing.Color.Aquamarine;
             this.AddUserFlatButton.OnHoverTextColor = System.Drawing.Color.White;
             this.AddUserFlatButton.selected = false;
-            this.AddUserFlatButton.Size = new System.Drawing.Size(280, 43);
+            this.AddUserFlatButton.Size = new System.Drawing.Size(210, 35);
             this.AddUserFlatButton.TabIndex = 18;
             this.AddUserFlatButton.Text = "Yeni Ekip Üyesini Sisteme Ekle";
             this.AddUserFlatButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -455,18 +448,16 @@ namespace Technolife
             // 
             // DistrictTextBox
             // 
-            this.DistrictTextBox.Location = new System.Drawing.Point(775, 108);
-            this.DistrictTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.DistrictTextBox.Location = new System.Drawing.Point(581, 88);
             this.DistrictTextBox.Name = "DistrictTextBox";
-            this.DistrictTextBox.Size = new System.Drawing.Size(160, 22);
+            this.DistrictTextBox.Size = new System.Drawing.Size(121, 20);
             this.DistrictTextBox.TabIndex = 17;
             // 
             // ProvinceTextBox
             // 
-            this.ProvinceTextBox.Location = new System.Drawing.Point(775, 71);
-            this.ProvinceTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.ProvinceTextBox.Location = new System.Drawing.Point(581, 58);
             this.ProvinceTextBox.Name = "ProvinceTextBox";
-            this.ProvinceTextBox.Size = new System.Drawing.Size(160, 22);
+            this.ProvinceTextBox.Size = new System.Drawing.Size(121, 20);
             this.ProvinceTextBox.TabIndex = 16;
             // 
             // GenderComboBox
@@ -475,139 +466,124 @@ namespace Technolife
             this.GenderComboBox.Items.AddRange(new object[] {
             "Erkek",
             "Kadın"});
-            this.GenderComboBox.Location = new System.Drawing.Point(775, 37);
-            this.GenderComboBox.Margin = new System.Windows.Forms.Padding(4);
+            this.GenderComboBox.Location = new System.Drawing.Point(581, 30);
             this.GenderComboBox.Name = "GenderComboBox";
-            this.GenderComboBox.Size = new System.Drawing.Size(160, 24);
+            this.GenderComboBox.Size = new System.Drawing.Size(121, 21);
             this.GenderComboBox.TabIndex = 15;
             // 
             // PhoneTextBox
             // 
-            this.PhoneTextBox.Location = new System.Drawing.Point(437, 71);
-            this.PhoneTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.PhoneTextBox.Location = new System.Drawing.Point(328, 58);
             this.PhoneTextBox.Name = "PhoneTextBox";
-            this.PhoneTextBox.Size = new System.Drawing.Size(160, 22);
+            this.PhoneTextBox.Size = new System.Drawing.Size(121, 20);
             this.PhoneTextBox.TabIndex = 14;
             // 
             // TCNumberTextBox
             // 
-            this.TCNumberTextBox.Location = new System.Drawing.Point(437, 37);
-            this.TCNumberTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.TCNumberTextBox.Location = new System.Drawing.Point(328, 30);
             this.TCNumberTextBox.Name = "TCNumberTextBox";
-            this.TCNumberTextBox.Size = new System.Drawing.Size(160, 22);
+            this.TCNumberTextBox.Size = new System.Drawing.Size(121, 20);
             this.TCNumberTextBox.TabIndex = 13;
             // 
             // PasswordTextBox
             // 
-            this.PasswordTextBox.Location = new System.Drawing.Point(141, 108);
-            this.PasswordTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.PasswordTextBox.Location = new System.Drawing.Point(106, 88);
             this.PasswordTextBox.Name = "PasswordTextBox";
-            this.PasswordTextBox.Size = new System.Drawing.Size(160, 22);
+            this.PasswordTextBox.Size = new System.Drawing.Size(121, 20);
             this.PasswordTextBox.TabIndex = 12;
             // 
             // SurnameTextBox
             // 
-            this.SurnameTextBox.Location = new System.Drawing.Point(141, 71);
-            this.SurnameTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.SurnameTextBox.Location = new System.Drawing.Point(106, 58);
             this.SurnameTextBox.Name = "SurnameTextBox";
-            this.SurnameTextBox.Size = new System.Drawing.Size(160, 22);
+            this.SurnameTextBox.Size = new System.Drawing.Size(121, 20);
             this.SurnameTextBox.TabIndex = 11;
             // 
             // NameTextBox
             // 
-            this.NameTextBox.Location = new System.Drawing.Point(141, 37);
-            this.NameTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.NameTextBox.Location = new System.Drawing.Point(106, 30);
             this.NameTextBox.Name = "NameTextBox";
-            this.NameTextBox.Size = new System.Drawing.Size(160, 22);
+            this.NameTextBox.Size = new System.Drawing.Size(121, 20);
             this.NameTextBox.TabIndex = 10;
             // 
             // DistrictLabel
             // 
             this.DistrictLabel.AutoSize = true;
-            this.DistrictLabel.Location = new System.Drawing.Point(683, 112);
-            this.DistrictLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.DistrictLabel.Location = new System.Drawing.Point(512, 91);
             this.DistrictLabel.Name = "DistrictLabel";
-            this.DistrictLabel.Size = new System.Drawing.Size(33, 17);
+            this.DistrictLabel.Size = new System.Drawing.Size(27, 13);
             this.DistrictLabel.TabIndex = 9;
             this.DistrictLabel.Text = "İlçe:";
             // 
             // ProvinceLabel
             // 
             this.ProvinceLabel.AutoSize = true;
-            this.ProvinceLabel.Location = new System.Drawing.Point(683, 75);
-            this.ProvinceLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.ProvinceLabel.Location = new System.Drawing.Point(512, 61);
             this.ProvinceLabel.Name = "ProvinceLabel";
-            this.ProvinceLabel.Size = new System.Drawing.Size(18, 17);
+            this.ProvinceLabel.Size = new System.Drawing.Size(15, 13);
             this.ProvinceLabel.TabIndex = 8;
             this.ProvinceLabel.Text = "İl:";
             // 
             // GenderLabel
             // 
             this.GenderLabel.AutoSize = true;
-            this.GenderLabel.Location = new System.Drawing.Point(683, 41);
-            this.GenderLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.GenderLabel.Location = new System.Drawing.Point(512, 33);
             this.GenderLabel.Name = "GenderLabel";
-            this.GenderLabel.Size = new System.Drawing.Size(61, 17);
+            this.GenderLabel.Size = new System.Drawing.Size(46, 13);
             this.GenderLabel.TabIndex = 7;
             this.GenderLabel.Text = "Cinsiyet:";
             // 
             // PhoneLabel
             // 
             this.PhoneLabel.AutoSize = true;
-            this.PhoneLabel.Location = new System.Drawing.Point(348, 75);
-            this.PhoneLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.PhoneLabel.Location = new System.Drawing.Point(261, 61);
             this.PhoneLabel.Name = "PhoneLabel";
-            this.PhoneLabel.Size = new System.Drawing.Size(60, 17);
+            this.PhoneLabel.Size = new System.Drawing.Size(46, 13);
             this.PhoneLabel.TabIndex = 6;
             this.PhoneLabel.Text = "Telefon:";
             // 
             // TCNumberValue
             // 
             this.TCNumberValue.AutoSize = true;
-            this.TCNumberValue.Location = new System.Drawing.Point(348, 41);
-            this.TCNumberValue.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.TCNumberValue.Location = new System.Drawing.Point(261, 33);
             this.TCNumberValue.Name = "TCNumberValue";
-            this.TCNumberValue.Size = new System.Drawing.Size(52, 17);
+            this.TCNumberValue.Size = new System.Drawing.Size(41, 13);
             this.TCNumberValue.TabIndex = 5;
             this.TCNumberValue.Text = "TC No:";
             // 
             // PasswordLabel
             // 
             this.PasswordLabel.AutoSize = true;
-            this.PasswordLabel.Location = new System.Drawing.Point(19, 112);
-            this.PasswordLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.PasswordLabel.Location = new System.Drawing.Point(14, 91);
             this.PasswordLabel.Name = "PasswordLabel";
-            this.PasswordLabel.Size = new System.Drawing.Size(97, 17);
+            this.PasswordLabel.Size = new System.Drawing.Size(72, 13);
             this.PasswordLabel.TabIndex = 4;
             this.PasswordLabel.Text = "Sistem Şifresi:";
             // 
             // SurnameLabel
             // 
             this.SurnameLabel.AutoSize = true;
-            this.SurnameLabel.Location = new System.Drawing.Point(17, 75);
-            this.SurnameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.SurnameLabel.Location = new System.Drawing.Point(13, 61);
             this.SurnameLabel.Name = "SurnameLabel";
-            this.SurnameLabel.Size = new System.Drawing.Size(52, 17);
+            this.SurnameLabel.Size = new System.Drawing.Size(40, 13);
             this.SurnameLabel.TabIndex = 3;
             this.SurnameLabel.Text = "Soyad:";
             // 
             // NameLabel
             // 
             this.NameLabel.AutoSize = true;
-            this.NameLabel.Location = new System.Drawing.Point(17, 41);
-            this.NameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.NameLabel.Location = new System.Drawing.Point(13, 33);
             this.NameLabel.Name = "NameLabel";
-            this.NameLabel.Size = new System.Drawing.Size(29, 17);
+            this.NameLabel.Size = new System.Drawing.Size(23, 13);
             this.NameLabel.TabIndex = 2;
             this.NameLabel.Text = "Ad:";
             // 
             // MissionLabel
             // 
             this.MissionLabel.AutoSize = true;
-            this.MissionLabel.Location = new System.Drawing.Point(351, 112);
-            this.MissionLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.MissionLabel.Location = new System.Drawing.Point(263, 91);
             this.MissionLabel.Name = "MissionLabel";
-            this.MissionLabel.Size = new System.Drawing.Size(51, 17);
+            this.MissionLabel.Size = new System.Drawing.Size(39, 13);
             this.MissionLabel.TabIndex = 1;
             this.MissionLabel.Text = "Görev:";
             // 
@@ -622,9 +598,11 @@ namespace Technolife
             this.NewProjectGroupBox.Controls.Add(this.ProjectInformationLabel);
             this.NewProjectGroupBox.Controls.Add(this.ProjectNameLabel);
             this.NewProjectGroupBox.Controls.Add(this.ProjectCategoryLabel);
-            this.NewProjectGroupBox.Location = new System.Drawing.Point(8, 618);
+            this.NewProjectGroupBox.Location = new System.Drawing.Point(6, 502);
+            this.NewProjectGroupBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.NewProjectGroupBox.Name = "NewProjectGroupBox";
-            this.NewProjectGroupBox.Size = new System.Drawing.Size(1445, 182);
+            this.NewProjectGroupBox.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.NewProjectGroupBox.Size = new System.Drawing.Size(1084, 148);
             this.NewProjectGroupBox.TabIndex = 21;
             this.NewProjectGroupBox.TabStop = false;
             this.NewProjectGroupBox.Text = "Yeni Proje Bilgilerini Giriniz";
@@ -635,9 +613,10 @@ namespace Technolife
             this.LogoBunifiFlatButton.BackColor = System.Drawing.Color.Transparent;
             this.LogoBunifiFlatButton.Image = ((System.Drawing.Image)(resources.GetObject("LogoBunifiFlatButton.Image")));
             this.LogoBunifiFlatButton.ImageActive = null;
-            this.LogoBunifiFlatButton.Location = new System.Drawing.Point(1030, 41);
+            this.LogoBunifiFlatButton.Location = new System.Drawing.Point(772, 33);
+            this.LogoBunifiFlatButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.LogoBunifiFlatButton.Name = "LogoBunifiFlatButton";
-            this.LogoBunifiFlatButton.Size = new System.Drawing.Size(120, 108);
+            this.LogoBunifiFlatButton.Size = new System.Drawing.Size(90, 88);
             this.LogoBunifiFlatButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.LogoBunifiFlatButton.TabIndex = 8;
             this.LogoBunifiFlatButton.TabStop = false;
@@ -664,14 +643,14 @@ namespace Technolife
             this.NewProjectAddButton.IconVisible = true;
             this.NewProjectAddButton.IconZoom = 90D;
             this.NewProjectAddButton.IsTab = false;
-            this.NewProjectAddButton.Location = new System.Drawing.Point(1159, 71);
-            this.NewProjectAddButton.Margin = new System.Windows.Forms.Padding(5);
+            this.NewProjectAddButton.Location = new System.Drawing.Point(869, 58);
+            this.NewProjectAddButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.NewProjectAddButton.Name = "NewProjectAddButton";
             this.NewProjectAddButton.Normalcolor = System.Drawing.Color.LightSalmon;
             this.NewProjectAddButton.OnHovercolor = System.Drawing.Color.Aquamarine;
             this.NewProjectAddButton.OnHoverTextColor = System.Drawing.Color.White;
             this.NewProjectAddButton.selected = false;
-            this.NewProjectAddButton.Size = new System.Drawing.Size(229, 45);
+            this.NewProjectAddButton.Size = new System.Drawing.Size(172, 37);
             this.NewProjectAddButton.TabIndex = 7;
             this.NewProjectAddButton.Text = "Yeni Projeyi Sisteme Ekle";
             this.NewProjectAddButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -700,14 +679,14 @@ namespace Technolife
             this.CategoryInformationFlatButton.IconVisible = true;
             this.CategoryInformationFlatButton.IconZoom = 90D;
             this.CategoryInformationFlatButton.IsTab = false;
-            this.CategoryInformationFlatButton.Location = new System.Drawing.Point(114, 114);
-            this.CategoryInformationFlatButton.Margin = new System.Windows.Forms.Padding(5);
+            this.CategoryInformationFlatButton.Location = new System.Drawing.Point(86, 93);
+            this.CategoryInformationFlatButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.CategoryInformationFlatButton.Name = "CategoryInformationFlatButton";
             this.CategoryInformationFlatButton.Normalcolor = System.Drawing.Color.LightSalmon;
             this.CategoryInformationFlatButton.OnHovercolor = System.Drawing.Color.Aquamarine;
             this.CategoryInformationFlatButton.OnHoverTextColor = System.Drawing.Color.White;
             this.CategoryInformationFlatButton.selected = false;
-            this.CategoryInformationFlatButton.Size = new System.Drawing.Size(161, 35);
+            this.CategoryInformationFlatButton.Size = new System.Drawing.Size(121, 28);
             this.CategoryInformationFlatButton.TabIndex = 6;
             this.CategoryInformationFlatButton.Text = "Kategori Açıklamaları";
             this.CategoryInformationFlatButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -717,51 +696,57 @@ namespace Technolife
             // 
             // ProjectInformationTextBox
             // 
-            this.ProjectInformationTextBox.Location = new System.Drawing.Point(505, 41);
+            this.ProjectInformationTextBox.Location = new System.Drawing.Point(379, 33);
+            this.ProjectInformationTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ProjectInformationTextBox.Multiline = true;
             this.ProjectInformationTextBox.Name = "ProjectInformationTextBox";
-            this.ProjectInformationTextBox.Size = new System.Drawing.Size(430, 118);
+            this.ProjectInformationTextBox.Size = new System.Drawing.Size(324, 97);
             this.ProjectInformationTextBox.TabIndex = 5;
             // 
             // ProjectCategoryComboBox
             // 
             this.ProjectCategoryComboBox.FormattingEnabled = true;
-            this.ProjectCategoryComboBox.Location = new System.Drawing.Point(114, 82);
+            this.ProjectCategoryComboBox.Location = new System.Drawing.Point(86, 67);
+            this.ProjectCategoryComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ProjectCategoryComboBox.Name = "ProjectCategoryComboBox";
-            this.ProjectCategoryComboBox.Size = new System.Drawing.Size(161, 24);
+            this.ProjectCategoryComboBox.Size = new System.Drawing.Size(122, 21);
             this.ProjectCategoryComboBox.TabIndex = 4;
             // 
             // ProjectNameTextBox
             // 
-            this.ProjectNameTextBox.Location = new System.Drawing.Point(114, 41);
+            this.ProjectNameTextBox.Location = new System.Drawing.Point(86, 33);
+            this.ProjectNameTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ProjectNameTextBox.Name = "ProjectNameTextBox";
-            this.ProjectNameTextBox.Size = new System.Drawing.Size(161, 22);
+            this.ProjectNameTextBox.Size = new System.Drawing.Size(122, 20);
             this.ProjectNameTextBox.TabIndex = 3;
             // 
             // ProjectInformationLabel
             // 
             this.ProjectInformationLabel.AutoSize = true;
-            this.ProjectInformationLabel.Location = new System.Drawing.Point(394, 44);
+            this.ProjectInformationLabel.Location = new System.Drawing.Point(296, 36);
+            this.ProjectInformationLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ProjectInformationLabel.Name = "ProjectInformationLabel";
-            this.ProjectInformationLabel.Size = new System.Drawing.Size(86, 17);
+            this.ProjectInformationLabel.Size = new System.Drawing.Size(65, 13);
             this.ProjectInformationLabel.TabIndex = 2;
             this.ProjectInformationLabel.Text = "Proje İçeriği:";
             // 
             // ProjectNameLabel
             // 
             this.ProjectNameLabel.AutoSize = true;
-            this.ProjectNameLabel.Location = new System.Drawing.Point(7, 44);
+            this.ProjectNameLabel.Location = new System.Drawing.Point(5, 36);
+            this.ProjectNameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ProjectNameLabel.Name = "ProjectNameLabel";
-            this.ProjectNameLabel.Size = new System.Drawing.Size(36, 17);
+            this.ProjectNameLabel.Size = new System.Drawing.Size(28, 13);
             this.ProjectNameLabel.TabIndex = 1;
             this.ProjectNameLabel.Text = "İsim:";
             // 
             // ProjectCategoryLabel
             // 
             this.ProjectCategoryLabel.AutoSize = true;
-            this.ProjectCategoryLabel.Location = new System.Drawing.Point(7, 85);
+            this.ProjectCategoryLabel.Location = new System.Drawing.Point(5, 69);
+            this.ProjectCategoryLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ProjectCategoryLabel.Name = "ProjectCategoryLabel";
-            this.ProjectCategoryLabel.Size = new System.Drawing.Size(65, 17);
+            this.ProjectCategoryLabel.Size = new System.Drawing.Size(49, 13);
             this.ProjectCategoryLabel.TabIndex = 0;
             this.ProjectCategoryLabel.Text = "Kategori:";
             // 
@@ -779,22 +764,55 @@ namespace Technolife
             this.ProjectUpdateGroupBox.Controls.Add(this.UpdatePInfoLabel);
             this.ProjectUpdateGroupBox.Controls.Add(this.UpdatePNameLabel);
             this.ProjectUpdateGroupBox.Controls.Add(this.UpdatePCategoryLabel);
-            this.ProjectUpdateGroupBox.Location = new System.Drawing.Point(6, 618);
+            this.ProjectUpdateGroupBox.Location = new System.Drawing.Point(4, 502);
+            this.ProjectUpdateGroupBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ProjectUpdateGroupBox.Name = "ProjectUpdateGroupBox";
-            this.ProjectUpdateGroupBox.Size = new System.Drawing.Size(1445, 182);
+            this.ProjectUpdateGroupBox.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ProjectUpdateGroupBox.Size = new System.Drawing.Size(1084, 148);
             this.ProjectUpdateGroupBox.TabIndex = 22;
             this.ProjectUpdateGroupBox.TabStop = false;
             this.ProjectUpdateGroupBox.Text = "Güncellemek İstediğiniz Projeye Dair Yeni Bilgileri Giriniz";
             this.ProjectUpdateGroupBox.Visible = false;
+            // 
+            // UpdateProjectIDComboBox
+            // 
+            this.UpdateProjectIDComboBox.FormattingEnabled = true;
+            this.UpdateProjectIDComboBox.Location = new System.Drawing.Point(87, 67);
+            this.UpdateProjectIDComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.UpdateProjectIDComboBox.Name = "UpdateProjectIDComboBox";
+            this.UpdateProjectIDComboBox.Size = new System.Drawing.Size(122, 21);
+            this.UpdateProjectIDComboBox.TabIndex = 11;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(7, 30);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(155, 26);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Güncellemek İstediğiniz Projeyi \r\nProjeID Seçeneği İle Belirleyiniz";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // UpdateProjectIDLabel
+            // 
+            this.UpdateProjectIDLabel.AutoSize = true;
+            this.UpdateProjectIDLabel.Location = new System.Drawing.Point(7, 69);
+            this.UpdateProjectIDLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.UpdateProjectIDLabel.Name = "UpdateProjectIDLabel";
+            this.UpdateProjectIDLabel.Size = new System.Drawing.Size(68, 13);
+            this.UpdateProjectIDLabel.TabIndex = 9;
+            this.UpdateProjectIDLabel.Text = "ID Numarası:";
             // 
             // UpdateProjecLogo
             // 
             this.UpdateProjecLogo.BackColor = System.Drawing.Color.Transparent;
             this.UpdateProjecLogo.Image = ((System.Drawing.Image)(resources.GetObject("UpdateProjecLogo.Image")));
             this.UpdateProjecLogo.ImageActive = null;
-            this.UpdateProjecLogo.Location = new System.Drawing.Point(1099, 44);
+            this.UpdateProjecLogo.Location = new System.Drawing.Point(824, 36);
+            this.UpdateProjecLogo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.UpdateProjecLogo.Name = "UpdateProjecLogo";
-            this.UpdateProjecLogo.Size = new System.Drawing.Size(120, 108);
+            this.UpdateProjecLogo.Size = new System.Drawing.Size(90, 88);
             this.UpdateProjecLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.UpdateProjecLogo.TabIndex = 8;
             this.UpdateProjecLogo.TabStop = false;
@@ -821,14 +839,14 @@ namespace Technolife
             this.UpdateProjectButton.IconVisible = true;
             this.UpdateProjectButton.IconZoom = 90D;
             this.UpdateProjectButton.IsTab = false;
-            this.UpdateProjectButton.Location = new System.Drawing.Point(1227, 71);
-            this.UpdateProjectButton.Margin = new System.Windows.Forms.Padding(5);
+            this.UpdateProjectButton.Location = new System.Drawing.Point(920, 58);
+            this.UpdateProjectButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.UpdateProjectButton.Name = "UpdateProjectButton";
             this.UpdateProjectButton.Normalcolor = System.Drawing.Color.LightSalmon;
             this.UpdateProjectButton.OnHovercolor = System.Drawing.Color.Aquamarine;
             this.UpdateProjectButton.OnHoverTextColor = System.Drawing.Color.White;
             this.UpdateProjectButton.selected = false;
-            this.UpdateProjectButton.Size = new System.Drawing.Size(209, 45);
+            this.UpdateProjectButton.Size = new System.Drawing.Size(157, 37);
             this.UpdateProjectButton.TabIndex = 7;
             this.UpdateProjectButton.Text = "Proje Bilgisini Güncelle";
             this.UpdateProjectButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -857,14 +875,14 @@ namespace Technolife
             this.UpdateCategoryInfoButton.IconVisible = true;
             this.UpdateCategoryInfoButton.IconZoom = 90D;
             this.UpdateCategoryInfoButton.IsTab = false;
-            this.UpdateCategoryInfoButton.Location = new System.Drawing.Point(399, 117);
-            this.UpdateCategoryInfoButton.Margin = new System.Windows.Forms.Padding(5);
+            this.UpdateCategoryInfoButton.Location = new System.Drawing.Point(299, 95);
+            this.UpdateCategoryInfoButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.UpdateCategoryInfoButton.Name = "UpdateCategoryInfoButton";
             this.UpdateCategoryInfoButton.Normalcolor = System.Drawing.Color.LightSalmon;
             this.UpdateCategoryInfoButton.OnHovercolor = System.Drawing.Color.Aquamarine;
             this.UpdateCategoryInfoButton.OnHoverTextColor = System.Drawing.Color.White;
             this.UpdateCategoryInfoButton.selected = false;
-            this.UpdateCategoryInfoButton.Size = new System.Drawing.Size(161, 35);
+            this.UpdateCategoryInfoButton.Size = new System.Drawing.Size(121, 28);
             this.UpdateCategoryInfoButton.TabIndex = 6;
             this.UpdateCategoryInfoButton.Text = "Kategori Açıklamaları";
             this.UpdateCategoryInfoButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -874,87 +892,66 @@ namespace Technolife
             // 
             // UpdatePInfoTextBox
             // 
-            this.UpdatePInfoTextBox.Location = new System.Drawing.Point(663, 44);
+            this.UpdatePInfoTextBox.Location = new System.Drawing.Point(497, 36);
+            this.UpdatePInfoTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.UpdatePInfoTextBox.Multiline = true;
             this.UpdatePInfoTextBox.Name = "UpdatePInfoTextBox";
-            this.UpdatePInfoTextBox.Size = new System.Drawing.Size(430, 118);
+            this.UpdatePInfoTextBox.Size = new System.Drawing.Size(324, 97);
             this.UpdatePInfoTextBox.TabIndex = 5;
             // 
             // UpdatePCategoryTextBox
             // 
             this.UpdatePCategoryTextBox.FormattingEnabled = true;
-            this.UpdatePCategoryTextBox.Location = new System.Drawing.Point(399, 82);
+            this.UpdatePCategoryTextBox.Location = new System.Drawing.Point(299, 67);
+            this.UpdatePCategoryTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.UpdatePCategoryTextBox.Name = "UpdatePCategoryTextBox";
-            this.UpdatePCategoryTextBox.Size = new System.Drawing.Size(161, 24);
+            this.UpdatePCategoryTextBox.Size = new System.Drawing.Size(122, 21);
             this.UpdatePCategoryTextBox.TabIndex = 4;
             // 
             // UpdatePNameTextBox
             // 
-            this.UpdatePNameTextBox.Location = new System.Drawing.Point(399, 44);
+            this.UpdatePNameTextBox.Location = new System.Drawing.Point(299, 36);
+            this.UpdatePNameTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.UpdatePNameTextBox.Name = "UpdatePNameTextBox";
-            this.UpdatePNameTextBox.Size = new System.Drawing.Size(161, 22);
+            this.UpdatePNameTextBox.Size = new System.Drawing.Size(122, 20);
             this.UpdatePNameTextBox.TabIndex = 3;
             // 
             // UpdatePInfoLabel
             // 
             this.UpdatePInfoLabel.AutoSize = true;
-            this.UpdatePInfoLabel.Location = new System.Drawing.Point(571, 44);
+            this.UpdatePInfoLabel.Location = new System.Drawing.Point(428, 36);
+            this.UpdatePInfoLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.UpdatePInfoLabel.Name = "UpdatePInfoLabel";
-            this.UpdatePInfoLabel.Size = new System.Drawing.Size(86, 17);
+            this.UpdatePInfoLabel.Size = new System.Drawing.Size(65, 13);
             this.UpdatePInfoLabel.TabIndex = 2;
             this.UpdatePInfoLabel.Text = "Proje İçeriği:";
             // 
             // UpdatePNameLabel
             // 
             this.UpdatePNameLabel.AutoSize = true;
-            this.UpdatePNameLabel.Location = new System.Drawing.Point(310, 47);
+            this.UpdatePNameLabel.Location = new System.Drawing.Point(232, 38);
+            this.UpdatePNameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.UpdatePNameLabel.Name = "UpdatePNameLabel";
-            this.UpdatePNameLabel.Size = new System.Drawing.Size(36, 17);
+            this.UpdatePNameLabel.Size = new System.Drawing.Size(28, 13);
             this.UpdatePNameLabel.TabIndex = 1;
             this.UpdatePNameLabel.Text = "İsim:";
             // 
             // UpdatePCategoryLabel
             // 
             this.UpdatePCategoryLabel.AutoSize = true;
-            this.UpdatePCategoryLabel.Location = new System.Drawing.Point(310, 85);
+            this.UpdatePCategoryLabel.Location = new System.Drawing.Point(232, 69);
+            this.UpdatePCategoryLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.UpdatePCategoryLabel.Name = "UpdatePCategoryLabel";
-            this.UpdatePCategoryLabel.Size = new System.Drawing.Size(65, 17);
+            this.UpdatePCategoryLabel.Size = new System.Drawing.Size(49, 13);
             this.UpdatePCategoryLabel.TabIndex = 0;
             this.UpdatePCategoryLabel.Text = "Kategori:";
             // 
-            // UpdateProjectIDLabel
-            // 
-            this.UpdateProjectIDLabel.AutoSize = true;
-            this.UpdateProjectIDLabel.Location = new System.Drawing.Point(9, 85);
-            this.UpdateProjectIDLabel.Name = "UpdateProjectIDLabel";
-            this.UpdateProjectIDLabel.Size = new System.Drawing.Size(89, 17);
-            this.UpdateProjectIDLabel.TabIndex = 9;
-            this.UpdateProjectIDLabel.Text = "ID Numarası:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(9, 37);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(207, 34);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "Güncellemek İstediğiniz Projeyi \r\nProjeID Seçeneği İle Belirleyiniz";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // UpdateProjectIDComboBox
-            // 
-            this.UpdateProjectIDComboBox.FormattingEnabled = true;
-            this.UpdateProjectIDComboBox.Location = new System.Drawing.Point(116, 82);
-            this.UpdateProjectIDComboBox.Name = "UpdateProjectIDComboBox";
-            this.UpdateProjectIDComboBox.Size = new System.Drawing.Size(161, 24);
-            this.UpdateProjectIDComboBox.TabIndex = 11;
-            // 
             // TakimKaptaniForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1465, 814);
+            this.ClientSize = new System.Drawing.Size(1099, 661);
             this.Controls.Add(this.ProjectUpdateGroupBox);
             this.Controls.Add(this.NewProjectGroupBox);
             this.Controls.Add(this.NewUserGroupBox);
@@ -963,7 +960,6 @@ namespace Technolife
             this.Controls.Add(this.LogoImageButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "TakimKaptaniForm";
             this.Text = "Technolife - Takım Kaptanı Ekranı";

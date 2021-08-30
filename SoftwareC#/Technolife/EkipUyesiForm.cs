@@ -22,10 +22,16 @@ namespace Technolife
         SqlConnect Connect = new SqlConnect();
         SqlCommand komut = new SqlCommand();
 
+        //Görünebilirlik Ayarı
+        void UyeVisible(bool datagrid)
+        {
+            EkipUyeDataGrid.Visible = datagrid;
+        }
+
         //SQL üzerinde tanımlamış olduğumuz TeamInfo Prosedürü kullanılarak Ekip üyesinin ait olduğu ekibe dair bilgileri getiriyoruz.
         private void TeamInfoFlatButton_Click(object sender, EventArgs e)
         {
-            EkipUyeDataGrid.Visible = true;
+            UyeVisible(true);
             komut = new SqlCommand("TeamInfo",Connect.Connect());
             komut.CommandType = CommandType.StoredProcedure;
             komut.Parameters.AddWithValue("@EkipID", LoginForm.EkipID);          
@@ -40,7 +46,7 @@ namespace Technolife
         //Projelerin Genel Puan Bilgilerini SQL üzerinde yadığımız View yardımıyla getiriyoruz.
         private void ProjectInfoFlatButton_Click_1(object sender, EventArgs e)
         {
-            EkipUyeDataGrid.Visible = true;
+            UyeVisible(true);
             komut = new SqlCommand("SELECT * FROM ProjectScoreRanking", Connect.Connect());
             SqlDataAdapter da = new SqlDataAdapter(komut);
             DataTable dt = new DataTable();

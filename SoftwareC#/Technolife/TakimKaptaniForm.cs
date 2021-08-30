@@ -30,18 +30,18 @@ namespace Technolife
         SqlCommand komut = new SqlCommand();
 
         //Görünürlük Düzenlemeri
-        void Visibility()
+        void Visibility(bool datagrid, bool newUser, bool newProject, bool projectUpdate)
         {
-            NewUserGroupBox.Visible = false;
-            TakimKaptaniDataGrid.Visible = true;
-            NewProjectGroupBox.Visible = false;
+            TakimKaptaniDataGrid.Visible = datagrid;
+            NewUserGroupBox.Visible = newUser;
+            NewProjectGroupBox.Visible = newProject;
+            ProjectUpdateGroupBox.Visible = projectUpdate;
         }
 
         //--------------------------------------------------------------------------------------------------------------------------------------
         //Takım Bilgilerini Görüntülemek İçin SQL Üzerinde Yazılmış Olan Prosedürü Kullanarak Veriyi Tabloya Aktarıyoruz.
         void TeamInfoShow()
         {
-            Visibility();
             komut = new SqlCommand("TeamInfo", Connect.Connect());
             komut.CommandType = CommandType.StoredProcedure;
             komut.Parameters.AddWithValue("@EkipID", LoginForm.EkipID);
@@ -55,7 +55,6 @@ namespace Technolife
         //Proje Bilgilerini Görüntülemek İçin SQL Üzerinde Yazılmış Olan Prosedürü Kullanarak Veriyi Tabloya Aktarıyoruz.
         void ProjectInformationShow()
         {
-            Visibility();
             komut = new SqlCommand("ShowProjectInfo", Connect.Connect());
             komut.CommandType = CommandType.StoredProcedure;
             komut.Parameters.AddWithValue("@EkipID", LoginForm.EkipID);
@@ -130,7 +129,7 @@ namespace Technolife
         //Projelerin Genel Puan Bilgilerini SQL üzerinde yadığımız View yardımıyla getiriyoruz.
         private void CaptanProjectInfoFlatButton_Click(object sender, EventArgs e)
         {
-            Visibility();
+            Visibility(true, false, false, false);
             komut = new SqlCommand("SELECT * FROM ProjectScoreRanking", Connect.Connect());
             SqlDataAdapter da = new SqlDataAdapter(komut);
             DataTable dt = new DataTable();
@@ -148,14 +147,12 @@ namespace Technolife
         //Kullanici Ekle İlk Görünüm Ayarı
         private void NewUsersAddFalatButton_Click(object sender, EventArgs e)
         {
-            NewUserGroupBox.Visible = true;
-            TakimKaptaniDataGrid.Visible = false;
-            NewProjectGroupBox.Visible = false;
+            Visibility(false,true,false,false);
         }
         //Yeni Kullaniciyi Sisteme Ekleme
         private void AddUserFlatButton_Click(object sender, EventArgs e)
         {
-            Visibility();
+            Visibility(true,false,false,false);
             komut = new SqlCommand("NewUsers", Connect.Connect());
             komut.CommandType = CommandType.StoredProcedure;
             komut.Parameters.AddWithValue("@ekipID", LoginForm.EkipID);
@@ -184,14 +181,12 @@ namespace Technolife
         //Yeni Proje Ekle İlk Görünüm Ayarı
         private void NewProjectFlatButton_Click(object sender, EventArgs e)
         {
-            NewUserGroupBox.Visible = false;
-            TakimKaptaniDataGrid.Visible = false;
-            NewProjectGroupBox.Visible = true;
+            Visibility(false,false,true,false);
         }
         //Yeni Projeyi Sisteme Ekleme
         private void NewProjectAddButton_Click(object sender, EventArgs e)
         {
-            Visibility();
+            Visibility(true, false, false, false);
             komut = new SqlCommand("NewProject", Connect.Connect());
             komut.CommandType = CommandType.StoredProcedure;
             komut.Parameters.AddWithValue("@ekipID", LoginForm.EkipID);
@@ -216,13 +211,13 @@ namespace Technolife
         //Projeleri Görüntüleme Ve Düzenleme
         private void ProjectAlterFlatButton_Click(object sender, EventArgs e)
         {
-            Visibility();
-            ProjectUpdateGroupBox.Visible = true;
+            Visibility(false, false, false, true);
             ProjectInformationShow();
         }
         //Proje Bilgilerini Güncelleme İşlemleri
         private void UpdateProjectButton_Click(object sender, EventArgs e)
         {
+            Visibility(true, false, false, false);
             komut = new SqlCommand("ProjectUpdate", Connect.Connect());
             komut.CommandType = CommandType.StoredProcedure;
             komut.Parameters.AddWithValue("@projeID", UpdateProjectIDComboBox.Text);
