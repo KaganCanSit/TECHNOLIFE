@@ -62,7 +62,7 @@ namespace Technolife
             SqlDataAdapter da = new SqlDataAdapter(komut);
             DataTable dt = new DataTable();
             da.Fill(dt);
-            DelUserComboBox.ValueMember = "kullaniciID";
+            DelUserComboBox.ValueMember = "Kullanıcı ID";
             DelUserComboBox.DataSource = dt;
         }
         // KategoriID'lerin Seçim İle ComboBox İçerisine Atılması
